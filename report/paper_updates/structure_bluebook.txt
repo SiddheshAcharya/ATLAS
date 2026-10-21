@@ -1,0 +1,408 @@
+   0 P[] 
+   1 P[] 
+   2 P[][IMG] 
+   3 P[] Project Report (Part I)
+   4 P[] on
+   5 P[] ATLAS: Agentic Technology for Literature Analysis and Synthesis
+   6 P[] Submitted in partial fulfilment for the award of the degree of
+   7 P[] BACHELOR OF TECHNOLOGY
+   8 P[] in
+   9 P[] ARTIFICIAL INTELLIGENCE AND MACHINE LEARNING
+  10 P[] Submitted by
+  11 P[] Siddhesh Acharya (Roll No. 01)
+  12 P[] Mrigakshi Kaul (Roll No. 20)
+  13 P[] Suhani Singh (Roll No. 51)
+  14 P[] 
+  15 P[] Under the Guidance of
+  16 P[] Pranjali Sankhe
+  17 P[] Assistant Professor
+  18 P[] 
+  19 P[] Department of Artificial Intelligence and Machine Learning 
+  20 P[] THAKUR COLLEGE OF ENGINEERING & TECHNOLOGY(Autonomous Institute, Affiliated to University of Mumbai)
+  21 P[] Mumbai India
+  22 P[] (Academic Year 2026-27)
+  23 P[] 
+  24 P[] 
+  25 P[][IMG] 
+  26 P[] CERTIFICATE
+  27 P[] This is to certify that the project entitled "ATLAS: Agentic Technology for Literature Analysis and Synth
+  28 TABLE 1 rows: Signature with Date:  ___________________Name of Guide: Pranjali SankheDesignation: Assistant Profes
+  29 P[][IMG] 
+  30 P[] PROJECT APPROVAL CERTIFICATE
+  31 P[] This project report entitled "ATLAS: Agentic Technology for Literature Analysis and Synthesis" by Siddhes
+  32 TABLE 3 rows: Internal Examiner                                    |External Examiner
+  33 P[] ACKNOWLEDGEMENT
+  34 P[] It would be unfair not to acknowledge the help and support extended by the professors, staff, and peers w
+  35 P[] We sincerely thank our guide, Mrs. Pranjali Sankhe, for the guidance and continual support extended throu
+  36 P[] We thank the Head of Department, Dr. Shiwani Gupta, the Principal, Dr. B. K. Mishra, and the college mana
+  37 P[] Finally, we thank our families and classmates for their patience and encouragement over the duration of t
+  38 P[] 
+  39 P[] 
+  40 P[] 
+  41 P[] 
+  42 P[] 
+  43 P[] 
+  44 P[] 
+  45 P[] 
+  46 P[] 
+  47 P[] 
+  48 P[] 
+  49 P[] 
+  50 P[] 
+  51 P[] 
+  52 P[] 
+  53 P[] 1. Siddhesh Acharya (Roll No. 01)
+  54 P[]                                                                                              
+  55 P[] 
+  56 P[] 
+  57 P[]                                                                                              2. Mrigakshi
+  58 P[] 
+  59 P[] 
+  60 P[] 
+  61 P[]                                                                           
+  62 P[]                                                                                                          
+  63 P[] INDEX
+  64 TABLE 42 rows: Chapter No.|Topic|Page No.
+  65 P[]  LIST OF FIGURES
+  66 P[] Figure 1: Gantt chart of the Project-I development schedule, by task, owner and week
+  67 P[] Figure 2: Use case diagram of the ATLAS system
+  68 P[] Figure 3: DFD Level 0 — context diagram of the ATLAS system
+  69 P[] Figure 4: DFD Level 1 — decomposition of the ATLAS system into its five constituent processes
+  70 P[] Figure 5: Block diagram of the proposed ATLAS pipeline (four phases)
+  71 P[] Figure 6: The six-layer software architecture and polyglot persistence tier
+  72 P[] Figure 7: Detailed system and physical-layout diagram
+  73 P[] Figure 8: The two-threshold deflection gate and promotion-on-discovery mechanism
+  74 P[] Figure 9: The grounding contract — verbatim quotation and character-span verification
+  75 P[] Figure 10: Two-stage conflict adjudication with a worked DIFFERENT_SCOPE example
+  76 P[] Figure 11: Swanson's ABC model automated as detector D1, and the six detectors fused
+  77 P[] Figure 12: Dashboard view — run summary statistics
+  78 P[] Figure 13: Research graph view — the live, force-directed knowledge graph
+  79 P[] Figure 14: Papers view — the analysed corpus with extracted methodology summaries
+  80 P[] LIST OF TABLES
+  81 P[] Table 1: Summary of the literature reviewed and its relevance to this project
+  82 P[] Table 2: Capability comparison against deployed literature tools
+  83 P[] Table 3: Feasibility study summary
+  84 P[] Table 4: Technology stack by architectural layer
+  85 P[] Table 5: Technology selection against rejected alternatives
+  86 P[] Table 6: The signals composing the priority function
+  87 P[] Table 7: The six gap detectors
+  88 P[] Table 8: Fields of the Claim data record
+  89 P[] Table 9: Experimental setup — hardware and software
+  90 P[] Table 10: Subsystem decomposition and effort weighting, fixed prior to implementation
+  91 P[] ABSTRACT
+  92 P[] The volume of published research now grows faster than any individual can read, and the tools built to ma
+  93 P[] Keywords: literature-based discovery; autonomous research agent; knowledge graph construction; informatio
+  94 P[] 
+  95 P[] Chapter 1
+  96 P[] Introduction
+  97 P[] 1.1  Overview of the Project
+  98 P[] ATLAS — Agentic Technology for Literature Analysis and Synthesis — is an autonomous software agent that r
+  99 P[] The system accepts a natural-language research question together with a reading-budget mode — Standard, D
+ 100 P[] This report documents the work carried out for Project-I: the problem motivating the system, the requirem
+ 101 P[] 1.2  Motivation and Application
+ 102 P[] The number of papers indexed each year continues to grow at a compounding rate of roughly four to five pe
+ 103 P[] The practical cost of this gap is visible across several groups. A junior researcher cannot know whether 
+ 104 P[] 1.3  Problem Definition
+ 105 P[] Existing literature tools answer the question "what exists?" competently and do not attempt to answer the
+ 106 P[ListParagraph] Conventional search and citation-graph explorers rank or map documents but never open them, so a merely c
+ 107 P[ListParagraph] Claim-level services report citation polarity — supporting or disputing — without regard to whether the t
+ 108 P[ListParagraph] General-purpose language-model assistants and standard retrieval-augmented generation pipelines fix their
+ 109 P[ListParagraph] No system in current use indexes absence: every database that exists is a record of what was published, n
+ 110 P[ListParagraph] Most tools are session-scoped and discard whatever they learned once a query ends, which caps the scale a
+ 111 P[] The problem this project addresses can therefore be stated concisely: to design and build an agent that d
+ 112 P[] 1.4  Objective and Scope
+ 113 P[ListParagraph] To design and develop an autonomous, AI-driven agent that reads and synthesises scientific literature rat
+ 114 P[ListParagraph] To implement a strategic foraging policy that decides, from what has already been read, which paper is mo
+ 115 P[ListParagraph] To guarantee factual trustworthiness through a grounding mechanism that verifies every extracted claim, c
+ 116 P[ListParagraph] To detect genuine contradictions across the literature while correctly separating them from differences i
+ 117 P[ListParagraph] To validate the system against defined baselines and a protocol fixed in advance — foraging recall, groun
+ 118 P[] The scope of the work reported here is the design, architecture, and Project-I implementation of the syst
+ 119 P[] 1.5  Expected Outcome
+ 120 P[] At the conclusion of Project-I, the expected outcome is a working system, decomposed into eleven weighted
+ 121 P[] 1.6  Organization of the Report
+ 122 P[] The remainder of this report is organised as follows. Chapter 2 surveys the literature underlying the pro
+ 123 P[] Chapter 2
+ 124 P[] Literature Survey and Proposed System
+ 125 P[] 2.1  Literature Review of Existing Systems
+ 126 P[] Eighteen primary sources were reviewed across five bodies of work that together bound the design space of
+ 127 P[] Table 1: Summary of the literature reviewed and its relevance to this project
+ 128 TABLE 10 rows: Author(s) / Year|Focus|Method / Novelty|Key Finding|Limitation Relative to This Project
+ 129 P[] Read together, these sources trace a consistent boundary. The discovery literature has a validated method
+ 130 P[] A second, complementary comparison was carried out against deployed literature tools already in everyday 
+ 131 P[] Table 2: Capability comparison against deployed literature tools
+ 132 TABLE 7 rows: System / Category|Retrieves|Traverses Citation Graph|Reads Full Text|Adjudicates Conflict|Reports Ab
+ 133 P[] 2.2  Limitations of Existing Systems and Gap Analysis
+ 134 P[] Table 2.2 makes visible a pattern that recurs across every category of deployed tool examined: each one a
+ 135 P[ListParagraph] Every existing system answers what exists; none answers what nobody has tried. Finding a gap is left to a
+ 136 P[ListParagraph] No deployed system adjudicates a conflict using the methods section of either paper, so a difference in e
+ 137 P[ListParagraph] No system decides what to read next from what it has just learned; retrieval sets are fixed once and neve
+ 138 P[ListParagraph] No system deletes its own output when it cannot prove it; an assistant that cannot distinguish a sentence
+ 139 P[ListParagraph] Session-scoped tools discard their corpus at the end of a run, which caps the field-scale, persistent gra
+ 140 P[] The practical consequence of these five gaps was framed in Section 1.2 in terms of who it hurts: a resear
+ 141 P[] 2.3  Proposed System
+ 142 P[] ATLAS is proposed as an autonomous agent organised around four sequential phases, shown at a high level i
+ 143 P[] Two design decisions distinguish this proposal from the systems reviewed in Section 2.1 and 2.2. First, t
+ 144 P[] Chapter 3
+ 145 P[] Requirement Gathering, Analysis and Planning
+ 146 P[] 3.1  Requirement Specification
+ 147 P[] 3.1.1  Functional Requirements
+ 148 P[ListParagraph] FR1 — The system shall accept a natural-language research question and a reading-budget mode (Standard, D
+ 149 P[ListParagraph] FR2 — The system shall query multiple open scholarly APIs in parallel and canonicalise duplicate records 
+ 150 P[ListParagraph] FR3 — The system shall rank candidate papers by semantic similarity to the question and admit a small see
+ 151 P[ListParagraph] FR4 — The system shall select, read, and parse exactly one full-text paper per loop iteration, chosen by 
+ 152 P[ListParagraph] FR5 — The system shall extract claims from a parsed paper, each carrying a verbatim quotation, a characte
+ 153 P[ListParagraph] FR6 — The system shall mechanically verify every extracted claim against the source text and discard any 
+ 154 P[ListParagraph] FR7 — The system shall adjudicate the relationship between a new claim and previously stored claims, retu
+ 155 P[ListParagraph] FR8 — The system shall expand the reading queue through the citation edges of a newly read paper and re-s
+ 156 P[ListParagraph] FR9 — The system shall apply a defined stopping rule and halt the reading loop when information gain deca
+ 157 P[ListParagraph] FR10 — The system shall run six independent gap-detection procedures over the finished knowledge graph an
+ 158 P[ListParagraph] FR11 — The system shall discard any candidate gap that cannot cite the specific papers bounding it, with 
+ 159 P[ListParagraph] FR12 — The system shall generate a consensus summary, a contradiction report, a ranked gap brief and a me
+ 160 P[ListParagraph] FR13 — The system shall allow the user to ask follow-up questions of a completed run, answering strictly 
+ 161 P[ListParagraph] FR14 — The system shall display the growing knowledge graph, the reading queue and run progress to the us
+ 162 P[] 3.1.2  Non-Functional Requirements
+ 163 P[ListParagraph] NFR1 (Reliability) — A run in progress shall survive the failure of a worker process and resume from the 
+ 164 P[ListParagraph] NFR2 (Traceability) — Every claim presented in a report shall be traceable to a specific quotation and ch
+ 165 P[ListParagraph] NFR3 (Economy) — The system shall be operable at near-zero marginal cost using free-tier APIs and self-ho
+ 166 P[ListParagraph] NFR4 (Scalability) — The architecture shall support reading budgets ranging from twenty-five to two hundr
+ 167 P[ListParagraph] NFR5 (Auditability) — Every reported completion percentage and evaluation figure shall be measured agains
+ 168 P[ListParagraph] NFR6 (Compliance) — The system shall access only APIs and documents whose terms of service permit automat
+ 169 P[ListParagraph] NFR7 (Usability) — A researcher with no knowledge of the system's internals shall be able to submit a que
+ 170 P[] 3.2  Feasibility Study
+ 171 P[] A feasibility study was carried out across four dimensions before implementation began, summarised in Tab
+ 172 P[] Table 3: Feasibility study summary
+ 173 TABLE 5 rows: Dimension|Assessment
+ 174 P[] A risk register was maintained alongside this study so that the highest-probability, highest-impact risks
+ 175 P[] 3.3  Methodology
+ 176 P[] Development is organised into three phases, each ending in an independently demonstrable milestone rather
+ 177 P[] Phase 1 — Working skeleton. The complete pipeline is stood up in thin form, end to end, so that a submitt
+ 178 P[] Phase 2 — Corpus and intelligence. Full-text ingestion, grounded claim extraction, the strategic foraging
+ 179 P[] Phase 3 — Evaluation and consolidation. The completed system is evaluated against the baselines and proto
+ 180 P[] A working prototype ("v0"), built before the architecture in Chapter 4 was finalised, used an eight-billi
+ 181 P[] Diagnostic findings from the v0 prototype build and the resulting design response
+ 182 TABLE 5 rows: Observation|Interpretation|Response in the Present Architecture
+ 183 P[] 3.4  Technology Stack
+ 184 P[] Every technology choice was made against four consistent criteria: zero or near-zero recurring cost, no r
+ 185 P[] Table 4: Technology stack by architectural layer
+ 186 TABLE 14 rows: Layer|Technology|Rationale
+ 187 P[] Several of these choices were made only after a specific alternative was considered and rejected, and Tab
+ 188 P[] Table 5: Technology selection against rejected alternatives
+ 189 TABLE 8 rows: Requirement|Selected|Rejected|Basis for Rejection
+ 190 P[] 3.5  Gantt Chart and Process Model
+ 191 P[] Development follows an incremental, milestone-driven process model rather than a single-pass waterfall: t
+ 192 P[][IMG] 
+ 193 P[] Figure 1: Gantt chart of the Project-I development schedule, by task, owner and week, with milestones M1–
+ 194 P[] 3.6  System Analysis (Functional, Structural and Behavioral Models)
+ 195 P[] 3.6.1  Functional Model
+ 196 P[] The functional model captures what the system must do from the point of view of the people and services t
+ 197 P[][IMG] 
+ 198 P[] Figure 2: Use case diagram of the ATLAS system
+ 199 P[] 3.6.2  Structural Model
+ 200 P[] The structural model is expressed here as a pair of data flow diagrams. Figure 3 gives the context-level 
+ 201 P[][IMG] 
+ 202 P[] Figure 3: DFD Level 0 — context diagram of the ATLAS system
+ 203 P[][IMG] 
+ 204 P[] Figure 4: DFD Level 1 — decomposition of the ATLAS system into its five constituent processes
+ 205 P[] 3.6.3  Behavioral Model
+ 206 P[] The behavioural model describes how the system moves through states over the lifetime of a single run rat
+ 207 P[] Chapter 4
+ 208 P[] System Design and Experimental Set Up
+ 209 P[] 4.1  System Architecture and Diagrams
+ 210 P[] The system is organised as a four-phase pipeline with a feedback edge that makes it agentic rather than a
+ 211 P[][IMG] 
+ 212 P[] Figure 5: Block diagram of the proposed ATLAS pipeline. Phase I seeds a corpus from open scholarly APIs; 
+ 213 P[] Underneath this logical pipeline, the implementation is organised into six software layers, shown in Figu
+ 214 P[][IMG] 
+ 215 P[] Figure 6: The six-layer software architecture, showing the polyglot persistence tier and the two-tier orc
+ 216 P[] Figure 7 gives the corresponding physical and data-flow layout: the actors and external services at the t
+ 217 P[][IMG] 
+ 218 P[] Figure 7: Detailed system and physical-layout diagram — actors, external services, the seven-step foragin
+ 219 P[] 4.2  Algorithm and Process Flow Design
+ 220 P[] This section presents the four algorithmic mechanisms that give the foraging loop its adaptive behaviour,
+ 221 P[] 4.2.1  The Foraging Loop and Priority Function
+ 222 P[] Each candidate paper d in the frontier F is scored from six signals computed from metadata and abstracts 
+ 223 P[] Table 6: The signals composing the priority function
+ 224 TABLE 8 rows: Signal|What It Measures|How It Is Computed
+ 225 P[] Novelty and Contest are the two signals original to this project and make the loop adaptive rather than a
+ 226 P[] The two-threshold deflection gate
+ 227 P[] Reading one paper adds roughly forty references and forty citing works to the candidate pool, so the fron
+ 228 P[][IMG] 
+ 229 P[] Figure 8: The two-threshold deflection gate and promotion-on-discovery mechanism
+ 230 P[] 4.2.2  Grounded Claim Extraction and Verification
+ 231 P[] Every claim record carries a standalone proposition, a verbatim quotation copied from the parsed source, 
+ 232 P[][IMG] 
+ 233 P[] Figure 9: The grounding contract — every claim carries a verbatim quotation and character span, checked b
+ 234 P[] 4.2.3  Two-Stage, Scope-Aware Conflict Adjudication
+ 235 P[] The number of unordered claim pairs over ten thousand stored claims is on the order of fifty million, whi
+ 236 P[][IMG] 
+ 237 P[] Figure 10: Two-stage conflict adjudication — an arithmetic screen followed by a scope-aware model verdict
+ 238 P[] The stopping rule
+ 239 P[] An agent that reads until its budget is exhausted has a page limit rather than a stopping rule. ATLAS ins
+ 240 TABLE 1 rows: Algorithm 4.2  StoppingRule(graph G, window w = 12, threshold tau)  delta(t) <- new_claims(t)       
+ 241 P[] The three weights are ordinal rather than fitted: a new claim is the ordinary unit of progress; a new con
+ 242 P[] 4.2.4  Gap Discovery
+ 243 P[] When the foraging loop exits, six structurally independent detectors are run once over the finished graph
+ 244 P[][IMG] 
+ 245 P[] Figure 11: Swanson's ABC model automated as detector D1 (left), and the six detectors fused into a single
+ 246 P[] Table 7: The six gap detectors
+ 247 TABLE 7 rows: Detector|Signal It Looks For|Method|Bounding Evidence It Must Cite
+ 248 P[] The six normalised outputs are fused into GapScore(g) = alpha.Novelty(g) + beta.Plausibility(g) + gamma.I
+ 249 P[] 4.3  User Interface and Input Data Design
+ 250 P[] The interface is a React and WebSocket-driven single-page application through which a researcher submits 
+ 251 P[][IMG] 
+ 252 P[] Figure 12: Dashboard view — run summary statistics and navigation to the synthesis outputs
+ 253 P[] Figure 13 shows the research-graph view: a force-directed, semantic citation network in which every paper
+ 254 P[][IMG] 
+ 255 P[] Figure 13: Research graph view — the live, force-directed knowledge graph with relationship-typed edges
+ 256 P[] Figure 14 shows the papers view, listing the full analysed corpus with its core methodology summary, extr
+ 257 P[][IMG] 
+ 258 P[] Figure 14: Papers view — the analysed corpus with extracted methodology summaries and limitations
+ 259 P[] Input data design
+ 260 P[] Two record structures anchor the input and intermediate data design and are worth stating explicitly, sin
+ 261 P[] Table 8: Fields of the Claim data record
+ 262 TABLE 10 rows: Field|Type|Description
+ 263 P[] 4.4  Experimental Setup and Tools
+ 264 P[] All components of the current build are self-hosted, and the full stack — the relational store, the graph
+ 265 P[] Table 9: Experimental setup — hardware and software
+ 266 TABLE 8 rows: Category|Item|Detail
+ 267 P[] 4.5  Implementation, Deployment and Testing
+ 268 P[] 4.5.1  Deployment
+ 269 P[] The system is deployed as a single Docker Compose composition of seven services — the FastAPI backend, Po
+ 270 P[] 4.5.2  Testing Approach
+ 271 P[] Testing is organised around the fact that the system mixes deterministic and model-driven components, and
+ 272 P[] Implementation status is tracked against eleven subsystems whose relative effort weight was fixed before 
+ 273 P[] Table 10: Subsystem decomposition and effort weighting, fixed prior to implementation
+ 274 TABLE 12 rows: ID|Subsystem|Effort Weight
+ 275 P[] Completion against this weighted denominator, subsystem by subsystem, is reported together with the corre
+ 276 P[] 4.6  Performance Evaluation
+ 277 P[] Four evaluation instruments are defined here in advance of measurement, together with the baselines each 
+ 278 P[ListParagraph] Foraging recall. Measured against published survey articles: a survey's own reference list is ground trut
+ 279 P[ListParagraph] Grounding accuracy. The proportion of proposed claims whose quotations verify against source text, cross-
+ 280 P[ListParagraph] Conflict adjudication. Measured on one hundred and fifty claim pairs labelled independently by four annot
+ 281 P[ListParagraph] Gap quality. Assessed by two procedures: a blind pairwise comparison of gaps produced by the system again
+ 282 P[] These four instruments, their baselines and their pre-registered targets are stated here as the protocol 
+ 283 P[] 4.7  Summary
+ 284 P[] This chapter has presented the system architecture at three levels of detail, the four algorithmic mechan
+ 285 P[] Chapter 5
+ 286 P[] Results and Discussion
+ 287 P[] This chapter is reserved for the results of the evaluation protocol defined in Section 4.6, to be complet
+ 288 P[] 5.1  Outputs and Outcomes
+ 289 P[] [ Reserved. To be completed with the outputs and outcomes obtained once the system has been fully evaluat
+ 290 P[] 5.2  Analysis of Results and Interpretation of Data
+ 291 P[] [ Reserved. To be completed with the analysis of results and the interpretation of the data obtained, mea
+ 292 P[] 5.3  Discussion of Results and Limitations of the System
+ 293 P[] [ Reserved. To be completed with a discussion of the results obtained and the limitations of the system o
+ 294 P[] Chapter 6
+ 295 P[] Conclusion and Future Scope
+ 296 P[] 6.1  Summary of Work Completed
+ 297 P[] This report has developed, for the Project-I stage, an autonomous literature-synthesis agent that treats 
+ 298 P[] The diagnostic findings from the early v0 prototype, summarised in Section 3.3, are the strongest evidenc
+ 299 P[] The eleven-subsystem, effort-weighted decomposition of Section 4.5 gives a fixed denominator against whic
+ 300 P[] 6.2  Future Scope
+ 301 P[] Five directions have been identified to extend this work beyond the scope of the present stage.
+ 302 P[ListParagraph] Learned frontier weights. The six weights of the priority function are currently hand-set. Fitting them b
+ 303 P[ListParagraph] Cross-domain bridging. Running the agent over two disjoint corpora simultaneously, with the bridge pool s
+ 304 P[ListParagraph] Automated research-proposal generation. The step from identifying a gap to specifying an experiment that 
+ 305 P[ListParagraph] A reviewer support mode. Given a submitted manuscript, the same machinery could answer three questions a 
+ 306 P[ListParagraph] Living surveys. Because the corpus persists across runs, a completed run could be re-executed periodicall
+ 307 P[] The wider position this project takes is a modest one: retrieval of scientific literature is a solved and
+ 308 P[] 
+ 309 P[] SDG Alignment 
+ 310 P[] SDG 9 — Industry, Innovation and Infrastructure
+ 311 P[] ATLAS is, at its core, a piece of research infrastructure. Target 9.5 explicitly calls for enhancing scie
+ 312 P[] 
+ 313 P[] SDG 8 — Decent Work and Economic Growth
+ 314 P[] Target 8.2 calls for higher levels of economic productivity through technological upgrading and innovatio
+ 315 P[] 
+ 316 P[] SDG 17 — Partnerships for the Goals
+ 317 P[] Target 17.6 calls for enhanced international cooperation on and access to science, technology and innovat
+ 318 P[] 
+ 319 P[] SDG 4 — Quality Education 
+ 320 P[] 
+ 321 P[] Target 4.3/4.4 ATLAS lowers the barrier to conducting a competent literature review, which is a core rese
+ 322 P[] 
+ 323 P[] 
+ 324 P[] 
+ 325 P[] References
+ 326 P[] [1]  Bornmann, L., & Mutz, R. (2015). Growth rates of modern science: A bibliometric analysis based on th
+ 327 P[] [2]  Burt, R. S. (1992). Structural holes: The social structure of competition. Harvard University Press.
+ 328 P[] [3]  Cohan, A., Feldman, S., Beltagy, I., Downey, D., & Weld, D. S. (2020). SPECTER: Document-level repre
+ 329 P[] [4]  Edge, D., Trinh, H., Cheng, N., Bradley, J., Chao, A., Mody, A., Truitt, S., & Larson, J. (2024). Fr
+ 330 P[] [5]  Gordon, M. D., & Lindsay, R. K. (1996). Toward discovery support systems: A replication, re-examinat
+ 331 P[] [6]  Grover, A., & Leskovec, J. (2016). node2vec: Scalable feature learning for networks. Proceedings of 
+ 332 P[] [7]  Hu, E. J., Shen, Y., Wallis, P., Allen-Zhu, Z., Li, Y., Wang, S., Wang, L., & Chen, W. (2022). LoRA:
+ 333 P[] [8]  Kwon, W., Li, Z., Zhuang, S., Sheng, Y., Zheng, L., Yu, C. H., Gonzalez, J. E., Zhang, H., & Stoica,
+ 334 P[] [9]  Landhuis, E. (2016). Scientific literature: Information overload. Nature, 535(7612), 457–458.
+ 335 P[] [10]  Lewis, P., Perez, E., Piktus, A., Petroni, F., Karpukhin, V., Goyal, N., Kuttler, H., Lewis, M., Yi
+ 336 P[] [11]  Lo, K., Wang, L. L., Neumann, M., Kinney, R., & Weld, D. S. (2020). S2ORC: The semantic scholar ope
+ 337 P[] [12]  Lopez, P. (2009). GROBID: Combining automatic bibliographic data recognition and term extraction fo
+ 338 P[] [13]  Page, L., Brin, S., Motwani, R., & Winograd, T. (1999). The PageRank citation ranking: Bringing ord
+ 339 P[] [14]  Pirolli, P., & Card, S. (1999). Information foraging. Psychological Review, 106(4), 643–675.
+ 340 P[] [15]  Priem, J., Piwowar, H., & Orr, R. (2022). OpenAlex: A fully-open index of scholarly works, authors,
+ 341 P[] [16]  Singh, A., D'Arcy, M., Cohan, A., Downey, D., & Feldman, S. (2023). SciRepEval: A multi-format benc
+ 342 P[] [17]  Smalheiser, N. R., & Swanson, D. R. (1998). Using ARROWSMITH: A computer-assisted approach to formu
+ 343 P[] [18]  Swanson, D. R. (1986). Fish oil, Raynaud's syndrome, and undiscovered public knowledge. Perspective
+ 344 P[] [19]  Traag, V. A., Waltman, L., & van Eck, N. J. (2019). From Louvain to Leiden: Guaranteeing well-conne
+ 345 P[] [20]  Wadden, D., Lin, S., Lo, K., Wang, L. L., van Zuylen, M., Cohan, A., & Hajishirzi, H. (2020). Fact 
+ 346 P[] [21]  Yao, S., Zhao, J., Yu, D., Du, N., Shafran, I., Narasimhan, K., & Cao, Y. (2023). ReAct: Synergizin
+ 347 P[] 
+ 348 P[] Research Paper
+ 349 P[] [ This section is intentionally left blank. The IEEE-format research paper corresponding to this project 
+ 350 P[] Formatting requirements to be followed when the paper is inserted:
+ 351 P[ListParagraph] IEEE two-column conference format, Times New Roman font throughout.
+ 352 P[ListParagraph] Title: 24 pt, bold. Author names: 11 pt. Affiliations and e-mail addresses: 9 pt italic.
+ 353 P[ListParagraph] Abstract and Keywords: 9 pt, justified, in the two-column IEEE template style.
+ 354 P[ListParagraph] Section headings (e.g. "I. INTRODUCTION"): 10 pt, bold, small caps, centred within the column.
+ 355 P[ListParagraph] Sub-section headings: 10 pt, bold italic.
+ 356 P[ListParagraph] Body text: 10 pt, single-spaced, fully justified.
+ 357 P[ListParagraph] Figure and table captions: 9 pt; figures numbered and referenced sequentially in the text.
+ 358 P[ListParagraph] References: IEEE numbered style, 9 pt, listed in order of first citation.
+ 359 P[] Appendix A
+ 360 P[] Abbreviations and Symbols
+ 361 P[] Abbreviations and Symbols
+ 362 P[] 
+ 363 P[] AI — Artificial Intelligence
+ 364 P[] ML — Machine Learning
+ 365 P[] API — Application Programming Interface
+ 366 P[] LLM — Large Language Model
+ 367 P[] RAG — Retrieval-Augmented Generation
+ 368 P[] GROBID — GeneRation Of BIbliographic Data
+ 369 P[] TEI — Text Encoding Initiative
+ 370 P[] DFD — Data Flow Diagram
+ 371 P[] UML — Unified Modeling Language
+ 372 P[] FR — Functional Requirement
+ 373 P[] NFR — Non-Functional Requirement
+ 374 P[] GPU — Graphics Processing Unit
+ 375 P[] RAM — Random Access Memory
+ 376 P[] CUDA — Compute Unified Device Architecture
+ 377 P[] LoRA — Low-Rank Adaptation
+ 378 P[] GDS — Graph Data Science (Neo4j library)
+ 379 P[] ANN — Approximate Nearest Neighbour
+ 380 P[] NLI — Natural Language Inference
+ 381 P[] PICO — Population, Intervention, Comparator, Outcome (and Measure)
+ 382 P[] DOI — Digital Object Identifier
+ 383 P[] OA — Open Access
+ 384 P[] UI — User Interface
+ 385 P[] 
+ 386 P[] Appendix B
+ 387 P[] Definitions
+ 388 P[] Embedding / vector: A piece of text converted into a fixed-length list of numbers that represents its mea
+ 389 P[] Cosine similarity: A measure of how close two embeddings are in direction, ranging from 0 (unrelated) to 
+ 390 P[] Frontier / queue: The growing, continuously re-sorted list of candidate papers the agent could read next.
+ 391 P[] Claim: One specific proposition asserted by a paper, stored together with the verbatim quotation that sup
+ 392 P[] Grounding: The rule that a claim is retained only if its quotation is verified, character for character, 
+ 393 P[] Bridge pool: The set of papers parked as unread graph nodes because they are too dissimilar to the query 
+ 394 P[] PageRank: A graph algorithm that scores a node as important if other important nodes point to it; used he
+ 395 P[] Leiden clustering: A community-detection algorithm that groups nodes of a graph into well-connected clust
+ 396 P[] RAG (Retrieval-Augmented Generation): An approach in which real documents are retrieved first and a langu
+ 397 P[] Agentic: Describing a system that decides its own next action, adapts that decision based on what it has 
+ 398 P[] Knowledge graph: A database of entities (here, papers, claims and concepts) as nodes and labelled relatio
+ 399 P[] GROBID: An open-source tool that converts a PDF into structured, section-labelled text together with a pa
+ 400 P[] SPECTER2: A document embedding model trained directly on the citation graph, so that embedding proximity 
+ 401 P[] PICO scope fields: Population, Intervention, Comparator, Outcome and Measure — five structured fields att
+ 402 P[] Deflection gate: The two-threshold filter that discards clearly irrelevant candidates, fully scores clear
+ 403 P[] Appendix C
+ 404 P[] List of Publications
+ 405 P[] Publications (IEEE Format):
+ 406 P[] [ To be added upon acceptance / publication. ]
+ 407 sectPr

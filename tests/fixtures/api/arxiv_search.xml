@@ -1,0 +1,46 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<feed xmlns:opensearch="http://a9.com/-/spec/opensearch/1.1/" xmlns:arxiv="http://arxiv.org/schemas/atom" xmlns="http://www.w3.org/2005/Atom">
+  <id>https://arxiv.org/api/u3iOpm+tX8Wn2v+vvFLHWJNR/lk</id>
+  <title>arXiv Query: search_query=all:"smart home security"&amp;id_list=&amp;start=0&amp;max_results=20</title>
+  <updated>2026-09-09T17:00:29Z</updated>
+  <link href="https://arxiv.org/api/query?search_query=all:%22smart+home+security%22&amp;start=0&amp;max_results=20&amp;id_list=" type="application/atom+xml"/>
+  <opensearch:itemsPerPage>20</opensearch:itemsPerPage>
+  <opensearch:totalResults>15</opensearch:totalResults>
+  <opensearch:startIndex>0</opensearch:startIndex>
+  <entry>
+    <id>http://arxiv.org/abs/2007.02628v1</id>
+    <title>Smart Home, security concerns of IoT</title>
+    <updated>2020-07-06T10:36:11Z</updated>
+    <link href="https://arxiv.org/abs/2007.02628v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2007.02628v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>The IoT (Internet of Things) has become widely popular in the domestic environments. People are renewing their homes into smart homes; however, the privacy concerns of owning many Internet connected devices with always-on environmental sensors remain insufficiently addressed. Default and weak passwords, cheap materials and hardware, and unencrypted communication are identified as the principal threats and vulnerabilities of IoT devices. Solutions and countermeasures are also provided: choosing a strong password, strong authentication mechanisms, check online databases of exposed or default credentials to mitigate the first threat; a selection of smart home devices from reputable companies and the implementation of the SDN for the Dos/DDoS threat; and finally IDS, HTTPS protocol and VPN for eavesdropping. The paper concludes dealing with a further challenge, "the lack of technical support", by which an auto-configuration approach should be analysed; this could both ease the installation/maintenance and enhance the security in the self configuration step of Smart Home devices.</summary>
+    <category term="cs.CR" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.CY" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2020-07-06T10:36:11Z</published>
+    <arxiv:primary_category term="cs.CR"/>
+    <author>
+      <name>Alessandro Ecclesie Agazzi</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2309.02899v1</id>
+    <title>Autonomous and Collaborative Smart Home Security System (ACSHSS)</title>
+    <updated>2023-09-06T10:41:51Z</updated>
+    <link href="https://arxiv.org/abs/2309.02899v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2309.02899v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Firstly, the proposed solution provides remotely accessible integrated IoT resources for the safety and security of the building. By using Sha ort Messaging System (SMS), the age is sent to the user by the Global System for Mobile (GSM) system. An SMS alert is sent to the user in case any sensor detects an abnormality in their operation. Secondly, an authentication mechanism is deployed to enable only authorized users to access resources. Thirdly, in case of a malicious approach in accessing IoT resources, a timely alert should be received by the owner. A Network Intrusion Detection System (NIDS) is deployed to detect and real-time information in case of any suspicious activity while accessing the Internet of Things network.</summary>
+    <category term="cs.CR" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2023-09-06T10:41:51Z</published>
+    <arxiv:comment>nill</arxiv:comment>
+    <arxiv:primary_category term="cs.CR"/>
+    <author>
+      <name>Hassan Jalil Hadi</name>
+    </author>
+    <author>
+      <name>Khaleeq Un Nisa</name>
+    </author>
+    <author>
+      <name>Sheetal Harris</name>
+    </author>
+  </entry>
+  </feed>

@@ -1,0 +1,211 @@
+   0 P[] ATLAS: Agentic Technology for Literature Analysis & Synthesis
+   1 P[] 
+   2 TABLE 1 rows: Siddhesh Acharya1, Mrigakshi Kaul2, Suhani Singh3, Pranjali Sankhe4Department of Artificial Intellig
+   3 P[] 
+   4 TABLE 1 rows: A R T I C L E   I N F OKeywords:Literature-based discoveryAutonomous research agentKnowledge graph c
+   5 P[] 
+   6 P[] 
+   7 P[Heading1] 1. Introduction
+   8 P[] Scholarly publishing has outgrown the reader. Estimates of the growth rate of the indexed literature cluster a
+   9 P[] The distinction matters more than it first appears. Retrieval answers the question what exists. The questions 
+  10 P[] Large language models appear at first to close this gap and on inspection do not. A general-purpose assistant 
+  11 P[] 
+  12 P[][IMG] 
+  13 P[] Fig. 1. Block diagram of the proposed ATLAS methodology. Phase I seeds a corpus from open scholarly APIs and s
+  14 P[] 
+  15 P[] ATLAS, Agentic Technology for Literature Analysis and Synthesis, is an autonomous agent that accepts a researc
+  16 P[Heading2] 1.1. Problem statement
+  17 P[] Existing approaches share deficiencies that motivate this work. Conventional search ranks documents and return
+  18 P[Heading2] 1.2. Contribution
+  19 P[] The principal contributions of this work are as follows.
+  20 P[ListParagraph] A strategic foraging policy is formulated in which the next paper to be read is selected by a seven-signal pri
+  21 P[ListParagraph] A two-threshold deflection gate with promotion-on-discovery is introduced to reconcile similarity filtering wi
+  22 P[ListParagraph] A mechanical grounding contract is specified in which each extracted claim carries a verbatim quotation and a 
+  23 P[ListParagraph] A two-stage, scope-aware conflict adjudicator is developed. An arithmetic screen reduces the quadratic pair sp
+  24 P[ListParagraph] Six structurally independent gap detectors are specified and fused into a single ranked list under a hard cita
+  25 P[ListParagraph] An evaluation protocol is defined in advance, with published baselines for each mechanism, an eleven-subsystem
+  26 P[] The remainder of the paper is organised as follows. Section 2 reviews prior work in literature-based discovery
+  27 P[Heading1] 2. Related work
+  28 P[] Swanson [18] established the field this work extends. Reading two medical literatures that did not cite one an
+  29 P[] Pirolli and Card [14] supplied the decision-theoretic account of what an information seeker should do next. Th
+  30 P[] On the representation side, SPECTER [3] and its successor SPECTER2 [16] learn document embeddings from the cit
+  31 P[] Claim-level verification has a benchmark in SciFact [20], which pairs expert-written scientific claims with su
+  32 P[] On the agent side, ReAct [21] demonstrated interleaving of reasoning traces with tool calls, and subsequent fr
+  33 P[] 
+  34 P[] Table 1
+  35 P[] Comprehensive survey of related works.
+  36 TABLE 9 rows: AuthorsObjectiveNovelties usedReported outcomeAdvantagesLimitations
+  37 P[] 
+  38 P[] 
+  39 P[] Table 1 records what each line of prior work contributed and where it stops. Read together, a consistent bound
+  40 P[] 
+  41 P[] Table 2
+  42 P[] Capability comparison against representative deployed systems.
+  43 TABLE 8 rows: SystemRetrievesTraverses citation graphReads full textAdjudicates conflictReports absencePersists ac
+  44 P[] 
+  45 P[] 
+  46 P[Heading1] 3. Proposed ATLAS framework
+  47 P[Heading2] 3.1. Overview and notation
+  48 P[] ATLAS accepts a research question q and a mode m that fixes a reading budget B, where B is 25 for Standard, 75
+  49 P[] Formally, let C denote the corpus of known works and R the subset read in full, with R a subset of C. Let F, t
+  50 P[Heading2] 3.2. Phase I: acquisition and semantic seeding
+  51 P[] The question is first decomposed into a set of ten to fifteen keyword formulations, since a single phrasing un
+  52 P[] Semantic ranking is then performed locally rather than delegated to the APIs, which permits a single consisten
+  53 P[Heading2] 3.3. Phase II: the foraging loop
+  54 P[] The loop reads exactly one paper per iteration, and the property that distinguishes it from a ranked retrieval
+  55 P[Heading3] 3.3.1. The priority function
+  56 P[] Each candidate d in F receives a score composed of seven signals, computed from metadata and abstracts only, s
+  57 P[] S(d) = w₁·Rel(d) + w₂·PR(d) + w₃·Brg(d) + w₄·Rec(d) + w₅·Nov(d) + w₆·Con(d)
+  58 P[] which is then converted to a priority by discounting for the probability of obtaining the full text and for th
+  59 P[] P(d) = S(d) · Pr[full text obtainable] / cost(d)
+  60 P[] and the work maximising P is read next. The cost term is not decorative. Roughly forty-five per cent of the wo
+  61 P[] 
+  62 P[] Table 3
+  63 P[] The seven frontier signals and their computation.
+  64 TABLE 8 rows: SignalWhat it measuresHow it is computedProvenance
+  65 P[] 
+  66 P[] 
+  67 P[] Novelty and Contest are the two signals that make the loop adaptive, and both are undefined at the first itera
+  68 P[Heading3] 3.3.2. The deflection gate and the bridge pool
+  69 P[] Reading one paper adds roughly forty references and forty citing works to the candidate pool, so F grows faste
+  70 P[] 
+  71 P[][IMG] 
+  72 P[] Fig. 3. The two-threshold deflection gate and promotion-on-discovery. Candidates below 0.20 are discarded perm
+  73 P[] 
+  74 P[] The difficulty is that the bridging concept in a literature-based discovery is, by construction, dissimilar to
+  75 P[] The remedy is to make the gate two-sided. Candidates scoring below 0.20 are discarded and not tracked. Candida
+  76 P[Heading3] 3.3.3. Grounded claim extraction
+  77 P[] The selected paper is located through Unpaywall and the open-access endpoints of the source APIs, stored under
+  78 P[] 
+  79 P[][IMG] 
+  80 P[] Fig. 4. The grounding contract. Every claim carries a verbatim quotation together with the character interval 
+  81 P[] 
+  82 P[] Each record contains the claim as a standalone proposition, a verbatim quotation from the source, the characte
+  83 P[] The verification step is the point of the design and is deliberately unintelligent. The stored text is sliced 
+  84 P[Heading3] 3.3.4. Scope-aware relationship adjudication
+  85 P[] Newly extracted claims must be related to those already stored. The number of unordered pairs over ten thousan
+  86 P[] 
+  87 P[][IMG] 
+  88 P[] Fig. 5. Two-stage conflict adjudication. Stage A applies four arithmetic filters that reduce fifty million can
+  89 P[] 
+  90 P[] Stage A is arithmetic. A pair survives only if both claims fall in the same Leiden community of the claim grap
+  91 P[] DIFFERENT_SCOPE is the verdict that justifies the scope fields. Consider two papers reporting that a parameter
+  92 P[Heading3] 3.3.5. The stopping rule
+  93 P[] An agent that reads until its budget is exhausted has a page limit, not a stopping rule. ATLAS measures inform
+  94 P[] Δ(t) = n_claims(t) + 2·n_contradictions(t) + 3·n_concepts(t)
+  95 P[] where each term counts objects new to the graph at that iteration. The weights are ordinal rather than tuned. 
+  96 P[] 
+  97 P[] The behaviour this produces is the one a supervisor would want from a research assistant: a report that says t
+  98 P[Heading2] 3.4. Phase III: gap discovery
+  99 P[] When the loop exits, G is complete for this run and the discovery phase runs once over it. Six detectors are a
+ 100 P[] 
+ 101 P[][IMG] 
+ 102 P[] Fig. 7. Left: Swanson's ABC model as automated in detector D1, together with the graph query that expresses it
+ 103 P[] Table 4
+ 104 P[] The six gap detectors.
+ 105 TABLE 7 rows: DetectorSignal it looks forMethodBounding evidence it must cite
+ 106 P[] 
+ 107 P[] 
+ 108 P[] Detector D3 warrants illustration because it is the least familiar. The corpus is projected onto a sparse tens
+ 109 P[] 
+ 110 P[] The six detector outputs are min-max normalised within detector and fused into a single ranking,
+ 111 P[] GapScore(g) = α·Novelty(g) + β·Plausibility(g) + γ·Impact(g) + δ·Feasibility(g)
+ 112 P[] where Novelty is structural distance in the graph between the endpoints of the gap, Plausibility is the streng
+ 113 P[Heading2] 3.5. Phase IV: synthesis and grounded interrogation
+ 114 P[] Synthesis is a single pass over a finished structure. It is worth stating explicitly that the graph is not bui
+ 115 P[] A conversational layer permits the researcher to interrogate the finished run: to ask follow-up questions, to 
+ 116 P[Heading2] 3.6. System architecture
+ 117 P[] The implementation is organised into six layers, shown in Fig. 9. The organising principle is that the coordin
+ 118 P[] 
+ 119 P[][IMG] 
+ 120 P[] Fig. 9. The six-layer architecture and its polyglot persistence tier. Each store is selected for a single quer
+ 121 P[] 
+ 122 P[] Orchestration is split across two tiers for a reason that is empirical rather than aesthetic. An Extra Deep ru
+ 123 P[] Persistence is deliberately polyglot. PostgreSQL is the source of truth and holds every paper, claim, quotatio
+ 124 P[] 
+ 125 P[] Table 5
+ 126 P[] Technology selection and rejected alternatives.
+ 127 TABLE 11 rows: RequirementSelectedRejectedBasis for rejection
+ 128 P[] 
+ 129 P[] 
+ 130 P[Heading1] 4. Results and discussion
+ 131 P[] This section separates two categories of result and labels them explicitly throughout. Section 4.2 reports mea
+ 132 P[Heading2] 4.1. Experimental setup
+ 133 P[] All components are self-hosted. The extraction and adjudication model is a seven-billion-parameter open-weight
+ 134 P[] Three evaluation instruments are defined. Foraging recall is measured against published survey articles: a sur
+ 135 P[Heading2] 4.2. Measured outcomes of the v0 build
+ 136 P[] A working prototype was built before the architecture of Section 3 was settled. It performed relationship infe
+ 137 P[] 
+ 138 P[][IMG] 
+ 139 P[] Fig. 10. Measured behaviour of the v0 build. (a) Edge density of the inferred relation graph against the densi
+ 140 P[] Table 6
+ 141 P[] Measured findings from the v0 build and the architectural response to each.
+ 142 TABLE 5 rows: ObservationMeasured valueInterpretationResponse in the present architecture
+ 143 P[] 
+ 144 P[] 
+ 145 P[] The density measurement is the most consequential of the four. A relation graph in which two of every three po
+ 146 P[Heading2] 4.3. Foraging recall against retrieval baselines
+ 147 P[] The foraging policy is evaluated against two baselines under an identical reading budget. The first is a bread
+ 148 P[] 
+ 149 P[][IMG] 
+ 150 P[] Fig. 11. Anticipated performance under the protocol of Section 4.1, against baselines fixed in advance. (a) Re
+ 151 P[] 
+ 152 P[] The target is to recover at least twice the survey references recovered by the breadth-first baseline at a bud
+ 153 P[Heading2] 4.4. Grounding accuracy
+ 154 P[] The target grounding pass rate is 0.95, with the frontier teacher as an upper reference and an unconstrained p
+ 155 P[Heading2] 4.5. Conflict adjudication
+ 156 P[] Adjudication is compared against a zero-shot natural-language-inference classifier and against the same classi
+ 157 P[Heading2] 4.6. Gap quality
+ 158 P[] Gap output is the hardest of the four instruments to evaluate, because there is no ground-truth register of un
+ 159 P[] The hard citation rule is the reason we expect a difference in the blind comparison. An unconstrained model pr
+ 160 P[Heading2] 4.7. Implementation status
+ 161 P[] Reporting a completion percentage requires a denominator, and a denominator chosen after measurement is not ev
+ 162 P[] 
+ 163 P[][IMG] 
+ 164 P[] Fig. 12. (a) Weighted implementation status across eleven subsystems, each scored against code in the reposito
+ 165 P[] 
+ 166 P[] What exists is substantial in three areas and absent in the rest. Weighted PageRank is implemented from first 
+ 167 P[] Fig. 12(b) sets out the economic constraint that shapes the intelligence layer. A single Extra Deep run issues
+ 168 P[Heading2] 4.8. Comparative analysis
+ 169 P[] Table 7 positions the proposed system against the related works of Section 2 on the dimensions that the proble
+ 170 P[] 
+ 171 P[] Table 7
+ 172 P[] Comparative analysis against related work on the dimensions identified in Section 1.1.
+ 173 TABLE 8 rows: WorkTechniqueChooses what to read nextVerifies evidence mechanicallyScope-aware conflictReports abse
+ 174 P[] 
+ 175 P[] 
+ 176 P[Heading2] 4.9. Limitations and threats to validity
+ 177 P[] Several limitations are inherent to the approach rather than incidental to its current state. Coverage is boun
+ 178 P[] Third, the adjudicator is a language model and remains the least reliable component in the system. The groundi
+ 179 P[Heading1] 5. Conclusion and future scope
+ 180 P[] This paper has presented ATLAS, an agentic system that treats the synthesis of scientific literature as a reso
+ 181 P[] Five directions extend the work.
+ 182 P[] (1)  Learned frontier weights. The seven weights of the priority function are currently hand-set. Fitting them
+ 183 P[] (2)  Cross-domain bridging. Swanson's method operates between literatures rather than within one. Running the 
+ 184 P[] (3)  Automated research-proposal generation. The step from identifying a gap to specifying an experiment that 
+ 185 P[] (4)  A reviewer support mode. Given a submitted manuscript, the same machinery answers three questions a revie
+ 186 P[] (5)  Living surveys. Because the corpus is persistent, a completed run can be re-executed periodically and rep
+ 187 P[] The wider argument the system is intended to support is modest and, we think, correct. Retrieval is a solved a
+ 188 P[Heading1] References
+ 189 P[] [1] Bornmann, L., & Mutz, R. (2015). Growth rates of modern science: A bibliometric analysis based on the numb
+ 190 P[] [2] Burt, R. S. (1992). Structural holes: The social structure of competition. Harvard University Press.
+ 191 P[] [3] Cohan, A., Feldman, S., Beltagy, I., Downey, D., & Weld, D. S. (2020). SPECTER: Document-level representat
+ 192 P[] [4] Edge, D., Trinh, H., Cheng, N., Bradley, J., Chao, A., Mody, A., Truitt, S., & Larson, J. (2024). From loc
+ 193 P[] [5] Gordon, M. D., & Lindsay, R. K. (1996). Toward discovery support systems: A replication, re-examination, a
+ 194 P[] [6] Grover, A., & Leskovec, J. (2016). node2vec: Scalable feature learning for networks. In Proceedings of the
+ 195 P[] [7] Hu, E. J., Shen, Y., Wallis, P., Allen-Zhu, Z., Li, Y., Wang, S., Wang, L., & Chen, W. (2022). LoRA: Low-r
+ 196 P[] [8] Kwon, W., Li, Z., Zhuang, S., Sheng, Y., Zheng, L., Yu, C. H., Gonzalez, J. E., Zhang, H., & Stoica, I. (2
+ 197 P[] [9] Landhuis, E. (2016). Scientific literature: Information overload. Nature, 535(7612), 457-458. https://doi.
+ 198 P[] [10] Lewis, P., Perez, E., Piktus, A., Petroni, F., Karpukhin, V., Goyal, N., Kuttler, H., Lewis, M., Yih, W.,
+ 199 P[] [11] Lo, K., Wang, L. L., Neumann, M., Kinney, R., & Weld, D. S. (2020). S2ORC: The semantic scholar open rese
+ 200 P[] [12] Lopez, P. (2009). GROBID: Combining automatic bibliographic data recognition and term extraction for scho
+ 201 P[] [13] Page, L., Brin, S., Motwani, R., & Winograd, T. (1999). The PageRank citation ranking: Bringing order to 
+ 202 P[] [14] Pirolli, P., & Card, S. (1999). Information foraging. Psychological Review, 106(4), 643-675. https://doi.
+ 203 P[] [15] Priem, J., Piwowar, H., & Orr, R. (2022). OpenAlex: A fully-open index of scholarly works, authors, venue
+ 204 P[] [16] Singh, A., D'Arcy, M., Cohan, A., Downey, D., & Feldman, S. (2023). SciRepEval: A multi-format benchmark 
+ 205 P[] [17] Smalheiser, N. R., & Swanson, D. R. (1998). Using ARROWSMITH: A computer-assisted approach to formulating
+ 206 P[] [18] Swanson, D. R. (1986). Fish oil, Raynaud's syndrome, and undiscovered public knowledge. Perspectives in B
+ 207 P[] [19] Traag, V. A., Waltman, L., & van Eck, N. J. (2019). From Louvain to Leiden: Guaranteeing well-connected c
+ 208 P[] [20] Wadden, D., Lin, S., Lo, K., Wang, L. L., van Zuylen, M., Cohan, A., & Hajishirzi, H. (2020). Fact or fic
+ 209 P[] [21] Yao, S., Zhao, J., Yu, D., Du, N., Shafran, I., Narasimhan, K., & Cao, Y. (2023). ReAct: Synergizing reas
+ 210 sectPr

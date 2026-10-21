@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
+  <teiHeader xml:lang="en">
+    <fileDesc>
+      <titleStmt>
+        <title level="a" type="main">A Wearable IoT Device for Personal Safety Alerts</title>
+      </titleStmt>
+    </fileDesc>
+    <profileDesc>
+      <abstract>
+        <div xmlns="http://www.tei-c.org/ns/1.0">
+          <p>We present a wrist-worn device that raises an alert within 1.8 seconds of a
+          triggered gesture. Field trials with 40 participants show a false-positive rate
+          below 3 percent.</p>
+        </div>
+      </abstract>
+    </profileDesc>
+  </teiHeader>
+  <text xml:lang="en">
+    <body>
+      <div xmlns="http://www.tei-c.org/ns/1.0">
+        <head n="1">Introduction</head>
+        <p>Personal safety wearables have proliferated over the last decade.</p>
+        <p>Existing systems trade latency for battery life; we target both.</p>
+      </div>
+      <div xmlns="http://www.tei-c.org/ns/1.0">
+        <head n="2">Proposed System Architecture</head>
+        <p>The device pairs an accelerometer with a low-power cellular radio.</p>
+        <p>A gesture classifier runs on-device to avoid streaming raw sensor data.</p>
+      </div>
+      <div xmlns="http://www.tei-c.org/ns/1.0">
+        <head n="3">Results and Evaluation</head>
+        <p>Mean alert latency was 1.8 seconds across 40 field trials in urban settings.</p>
+      </div>
+      <div xmlns="http://www.tei-c.org/ns/1.0">
+        <head n="4">Limitations</head>
+        <p>The trial cohort skewed young and urban; rural coverage was not evaluated.</p>
+      </div>
+      <div xmlns="http://www.tei-c.org/ns/1.0">
+        <head n="5">Future Work</head>
+        <p>We plan to evaluate fall detection as a secondary trigger.</p>
+      </div>
+    </body>
+    <back>
+      <div type="references" xmlns="http://www.tei-c.org/ns/1.0">
+        <listBibl>
+          <biblStruct>
+            <analytic>
+              <title level="a" type="main">Deep Residual Learning for Image Recognition</title>
+              <author><persName><forename type="first">Kaiming</forename><surname>He</surname></persName></author>
+            </analytic>
+            <monogr>
+              <imprint><date type="published" when="2016">2016</date></imprint>
+            </monogr>
+            <idno type="DOI">10.1109/CVPR.2016.90</idno>
+          </biblStruct>
+          <biblStruct>
+            <analytic>
+              <title level="a" type="main">A Survey of Personal Safety Wearables</title>
+              <author><persName><forename type="first">R</forename><surname>Sharma</surname></persName></author>
+            </analytic>
+            <monogr>
+              <imprint><date type="published" when="2021">2021</date></imprint>
+            </monogr>
+          </biblStruct>
+        </listBibl>
+      </div>
+    </back>
+  </text>
+</TEI>

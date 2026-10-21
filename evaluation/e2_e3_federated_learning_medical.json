@@ -1,0 +1,54 @@
+[
+  {
+    "label": "e2:full",
+    "ok": false,
+    "error": "timeout"
+  },
+  {
+    "label": "e2:-pagerank",
+    "ok": true,
+    "run_id": "8a1f40e0-b1c0-4c01-9f68-184827b0d276",
+    "elapsed_s": 2941.4,
+    "papers_read": 13,
+    "stop_reason": "budget: 48 minutes elapsed",
+    "relations_judged": 71,
+    "contradictions": 0,
+    "clusters_covered": 12
+  },
+  {
+    "label": "e2:-novelty",
+    "ok": false,
+    "error": "'charmap' codec can't encode character '\\u2502' in position 19: character maps to <undefined>"
+  },
+  {
+    "label": "e2:-contest",
+    "ok": false,
+    "error": "'charmap' codec can't encode character '\\u2502' in position 19: character maps to <undefined>"
+  },
+  {
+    "label": "e2:-recency",
+    "ok": false,
+    "error": "'charmap' codec can't encode character '\\u2502' in position 19: character maps to <undefined>"
+  },
+  {
+    "label": "e2:relevance_only",
+    "ok": false,
+    "error": "'charmap' codec can't encode character '\\u2502' in position 19: character maps to <undefined>"
+  },
+  {
+    "label": "e3:bridge_on",
+    "ok": false,
+    "error": "'charmap' codec can't encode character '\\u2502' in position 19: character maps to <undefined>"
+  },
+  {
+    "label": "e3:bridge_off",
+    "ok": true,
+    "run_id": "42ddbe56-585a-4b2c-8edc-b3f7ba4b4684",
+    "elapsed_s": 13328.9,
+    "papers_read": 14,
+    "stop_reason": "budget: 221 minutes elapsed",
+    "relations_judged": 88,
+    "contradictions": 0,
+    "clusters_covered": 13
+  }
+]

@@ -1,0 +1,5 @@
+* text=auto eol=lf
+*.png binary
+*.pdf binary
+*.ico binary
+data/atlas.db filter=lfs diff=lfs merge=lfs -text

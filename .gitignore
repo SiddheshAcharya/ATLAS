@@ -1,0 +1,40 @@
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+*.egg-info/
+.mypy_cache/
+.ruff_cache/
+.pytest_cache/
+.coverage
+htmlcov/
+
+.env
+*.db
+*.sqlite3
+!tests/fixtures/e2e/*.db
+
+node_modules/
+web/dist/
+web/.vite/
+
+# data/ is committed on purpose so the demo runs, caches and offline snapshots travel with
+# the repo — except downloaded papers (regenerable open-access PDFs; don't redistribute
+# them) and lock files.
+data/pdfs/
+data/tei/
+data/cache/
+data/**/.lock
+!data/atlas.db
+runs/
+!data/runs/
+*.log
+
+.DS_Store
+.idea/
+.vscode/
+config/.scoring.yaml.sweep-backup
+
+# Blue Book / paper drafts — kept local, not published (scripts and .md notes are kept)
+report/paper_updates/*.docx
+report/paper_updates/*.pdf

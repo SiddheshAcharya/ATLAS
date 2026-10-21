@@ -1,0 +1,45 @@
+{
+  "run_id": "42ddbe56-585a-4b2c-8edc-b3f7ba4b4684",
+  "query": "federated learning for medical imaging",
+  "atlas_papers_read": 14,
+  "baseline_top_k": 25,
+  "overlap_count": 5,
+  "overlap_ratio": 0.357,
+  "mean_citation_count": {
+    "atlas": null,
+    "baseline": 75.6
+  },
+  "diversity_clusters_at_floor_0.55": {
+    "atlas": 1,
+    "baseline": 1,
+    "caveat": "This embedding-cosine metric answers a different question from atlas_only.distinct_louvain_clusters_covered below, and the two can legitimately disagree (e.g. both near 1). Every candidate here was retrieved *because* it matched the query topically, so abstract embeddings for both sets tend to clump into one semantic cluster regardless of which 25 (or 15) got picked \u2014 that's expected, not a bug. Louvain over the citation graph clusters by *citation structure* instead, which has nothing to do with abstract-text similarity and is the metric that actually speaks to breadth the loop can find and one-shot cosine ranking cannot."
+  },
+  "atlas_only": {
+    "mean_pagerank": 0.5983,
+    "contradictions_found": 0,
+    "gaps_found": 0
+  },
+  "citation_breadth": {
+    "graph_nodes": 673,
+    "graph_edges": 835,
+    "atlas": {
+      "papers": 14,
+      "papers_with_references": 12,
+      "clusters_covered": 10,
+      "distinct_references_reached": 355
+    },
+    "baseline": {
+      "papers": 25,
+      "papers_with_references": 15,
+      "clusters_covered": 12,
+      "distinct_references_reached": 461
+    },
+    "baseline_top_14": {
+      "papers": 14,
+      "papers_with_references": 10,
+      "clusters_covered": 8,
+      "distinct_references_reached": 332
+    },
+    "note": "clusters_covered counts only papers with at least one OpenAlex reference (a paper with none would be its own singleton cluster and inflate breadth); compare papers_with_references too. Same graph, same clustering for both sets."
+  }
+}

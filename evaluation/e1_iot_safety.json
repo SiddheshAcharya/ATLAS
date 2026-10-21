@@ -1,0 +1,23 @@
+{
+  "run_id": "a0e32253-6a67-46e5-9b4e-6273c0aa1673",
+  "query": "IoT devices for women safety",
+  "atlas_papers_read": 15,
+  "baseline_top_k": 25,
+  "overlap_count": 6,
+  "overlap_ratio": 0.4,
+  "mean_citation_count": {
+    "atlas": null,
+    "baseline": 16.1
+  },
+  "diversity_clusters_at_floor_0.55": {
+    "atlas": 1,
+    "baseline": 1,
+    "caveat": "This embedding-cosine metric answers a different question from atlas_only.distinct_louvain_clusters_covered below, and the two can legitimately disagree (e.g. both near 1). Every candidate here was retrieved *because* it matched the query topically, so abstract embeddings for both sets tend to clump into one semantic cluster regardless of which 25 (or 15) got picked \u2014 that's expected, not a bug. Louvain over the citation graph clusters by *citation structure* instead, which has nothing to do with abstract-text similarity and is the metric that actually speaks to breadth the loop can find and one-shot cosine ranking cannot."
+  },
+  "atlas_only": {
+    "mean_pagerank": 0.5126,
+    "distinct_louvain_clusters_covered": 14,
+    "contradictions_found": 1,
+    "gaps_found": 11
+  }
+}

@@ -1,0 +1,352 @@
+{
+ "1": {
+  "type": "SUPPORTS",
+  "confidence": 0.95,
+  "judged_by": "groq/openai/gpt-oss-20b",
+  "a_claim_id": "e7cdda25-2be1-4c5b-b441-3f4517d35186",
+  "b_claim_id": "1116f651-f8e9-457c-bdd5-f82e382b90cd"
+ },
+ "2": {
+  "type": "SUPPORTS",
+  "confidence": 0.9,
+  "judged_by": "groq/openai/gpt-oss-20b",
+  "a_claim_id": "bf11ffb3-c500-49dc-9440-5f3810a4a36c",
+  "b_claim_id": "c816332d-b857-45a0-832a-9574ba201fab"
+ },
+ "3": {
+  "type": "SUPPORTS",
+  "confidence": 0.9,
+  "judged_by": "groq/openai/gpt-oss-20b",
+  "a_claim_id": "caecd69a-5400-4f14-beba-8309e3cffca1",
+  "b_claim_id": "1811875f-1bcf-4727-9da7-3398f69d9d97"
+ },
+ "4": {
+  "type": "SUPPORTS",
+  "confidence": 0.9,
+  "judged_by": "groq/openai/gpt-oss-20b",
+  "a_claim_id": "199aa5ea-c992-4b9d-bf89-922811487079",
+  "b_claim_id": "bd7a8070-1fc7-4b5a-bb87-ae0436a5ede1"
+ },
+ "5": {
+  "type": "SUPPORTS",
+  "confidence": 0.9,
+  "judged_by": "groq/openai/gpt-oss-20b",
+  "a_claim_id": "361a6a0c-9eca-4274-8409-d57f924724e6",
+  "b_claim_id": "91e8f0f3-2cee-4166-84a4-614c06199dd8"
+ },
+ "6": {
+  "type": "SUPPORTS",
+  "confidence": 0.9,
+  "judged_by": "groq/openai/gpt-oss-20b",
+  "a_claim_id": "5d00ef90-35eb-4d2c-a724-be4589472a5b",
+  "b_claim_id": "4045d421-81b1-40de-a544-d3c9ea170dad"
+ },
+ "7": {
+  "type": "SUPPORTS",
+  "confidence": 0.9,
+  "judged_by": "groq/openai/gpt-oss-20b",
+  "a_claim_id": "acb6482f-4b5e-42aa-a3b6-0572b37e9e5f",
+  "b_claim_id": "ea46c168-f07d-476a-b2c8-2b5b93e77e92"
+ },
+ "8": {
+  "type": "SUPPORTS",
+  "confidence": 0.9,
+  "judged_by": "groq/openai/gpt-oss-20b",
+  "a_claim_id": "9a0c701f-f5bb-4b9b-9529-8055a9782b13",
+  "b_claim_id": "424ead29-ae95-472d-a769-42c024179525"
+ },
+ "9": {
+  "type": "SUPPORTS",
+  "confidence": 0.9,
+  "judged_by": "groq/openai/gpt-oss-20b",
+  "a_claim_id": "1e03e5f3-dfb0-4296-aa0b-0170a7309432",
+  "b_claim_id": "424ead29-ae95-472d-a769-42c024179525"
+ },
+ "10": {
+  "type": "SUPPORTS",
+  "confidence": 0.95,
+  "judged_by": "groq/openai/gpt-oss-20b",
+  "a_claim_id": "7ccbfa28-53bd-4f6d-bf79-613816aeb993",
+  "b_claim_id": "28027bbe-2095-4903-9600-d3e735f10f0b"
+ },
+ "11": {
+  "type": "SUPPORTS",
+  "confidence": 0.95,
+  "judged_by": "groq/openai/gpt-oss-20b",
+  "a_claim_id": "9917ab1e-6340-4c68-a929-ed7547059309",
+  "b_claim_id": "cf603eab-f7f0-491b-bb98-9abffa34d992"
+ },
+ "12": {
+  "type": "SUPPORTS",
+  "confidence": 0.95,
+  "judged_by": "groq/openai/gpt-oss-20b",
+  "a_claim_id": "91e5d159-d994-4569-8b8f-1ba3ca6f8fee",
+  "b_claim_id": "88edc832-b584-4305-8610-a5c9e1a412f9"
+ },
+ "13": {
+  "type": "CONTRADICTS",
+  "confidence": 0.9,
+  "judged_by": "groq/openai/gpt-oss-20b",
+  "a_claim_id": "1e03e5f3-dfb0-4296-aa0b-0170a7309432",
+  "b_claim_id": "c453f7ef-f2a1-4723-b0a8-071498aa0301"
+ },
+ "14": {
+  "type": "CONTRADICTS",
+  "confidence": 0.9,
+  "judged_by": "groq/openai/gpt-oss-20b",
+  "a_claim_id": "7c154371-ac6c-4de0-8cd7-88d82fe3b4a6",
+  "b_claim_id": "1fa4659c-51ca-4d52-a0b6-13e24abc1bf0"
+ },
+ "15": {
+  "type": "EXTENDS",
+  "confidence": 0.9,
+  "judged_by": "groq/openai/gpt-oss-20b",
+  "a_claim_id": "7aada2f2-2bc8-4bee-93f5-dbabe0a735cb",
+  "b_claim_id": "f7bd89ea-2161-4db7-a624-f7c16321cc19"
+ },
+ "16": {
+  "type": "EXTENDS",
+  "confidence": 0.9,
+  "judged_by": "groq/openai/gpt-oss-20b",
+  "a_claim_id": "dd843bf2-de62-450a-8f02-731a28f37b58",
+  "b_claim_id": "424ead29-ae95-472d-a769-42c024179525"
+ },
+ "17": {
+  "type": "EXTENDS",
+  "confidence": 0.9,
+  "judged_by": "groq/openai/gpt-oss-20b",
+  "a_claim_id": "1e03e5f3-dfb0-4296-aa0b-0170a7309432",
+  "b_claim_id": "a147852f-2078-47f1-a1d1-83c774a69262"
+ },
+ "18": {
+  "type": "EXTENDS",
+  "confidence": 0.9,
+  "judged_by": "groq/openai/gpt-oss-20b",
+  "a_claim_id": "7a2975ac-29c7-4164-aa41-893fcd03bdb3",
+  "b_claim_id": "7aada2f2-2bc8-4bee-93f5-dbabe0a735cb"
+ },
+ "19": {
+  "type": "EXTENDS",
+  "confidence": 0.9,
+  "judged_by": "groq/openai/gpt-oss-20b",
+  "a_claim_id": "7a2975ac-29c7-4164-aa41-893fcd03bdb3",
+  "b_claim_id": "b1102c7b-883a-4113-b574-61be2c4def0b"
+ },
+ "20": {
+  "type": "EXTENDS",
+  "confidence": 0.9,
+  "judged_by": "groq/openai/gpt-oss-20b",
+  "a_claim_id": "d9fab988-4f95-4cda-a1e6-009dd681d342",
+  "b_claim_id": "ef4b8a49-a5d5-410f-b5a9-34ecff9a02a3"
+ },
+ "21": {
+  "type": "EXTENDS",
+  "confidence": 0.9,
+  "judged_by": "groq/openai/gpt-oss-20b",
+  "a_claim_id": "1116f651-f8e9-457c-bdd5-f82e382b90cd",
+  "b_claim_id": "7f6a2ad5-36a8-4c4f-bcbb-9b73e669ae72"
+ },
+ "22": {
+  "type": "EXTENDS",
+  "confidence": 0.9,
+  "judged_by": "groq/openai/gpt-oss-20b",
+  "a_claim_id": "e9289f60-370b-4204-8b01-1158d3562967",
+  "b_claim_id": "5d00ef90-35eb-4d2c-a724-be4589472a5b"
+ },
+ "23": {
+  "type": "EXTENDS",
+  "confidence": 0.9,
+  "judged_by": "groq/openai/gpt-oss-20b",
+  "a_claim_id": "4330e151-f527-42fd-b9c8-b83b44d99bf3",
+  "b_claim_id": "c60d8509-b057-4907-a8bc-390e33c40cde"
+ },
+ "24": {
+  "type": "EXTENDS",
+  "confidence": 0.9,
+  "judged_by": "groq/openai/gpt-oss-20b",
+  "a_claim_id": "2dbf02cf-31e9-48d7-8831-d4b65bdc43d7",
+  "b_claim_id": "cbf7cdcb-7e6c-4efc-8d5d-d24e142ad5e8"
+ },
+ "25": {
+  "type": "EXTENDS",
+  "confidence": 0.9,
+  "judged_by": "groq/openai/gpt-oss-20b",
+  "a_claim_id": "7ccbfa28-53bd-4f6d-bf79-613816aeb993",
+  "b_claim_id": "7ed37fea-9c77-4dac-8bec-3f54a1a8f24e"
+ },
+ "26": {
+  "type": "EXTENDS",
+  "confidence": 0.8,
+  "judged_by": "groq/openai/gpt-oss-20b",
+  "a_claim_id": "522d5cfe-5afd-4579-8a23-e3bd382ce318",
+  "b_claim_id": "74ad52b0-a692-4603-98c3-467425a61c77"
+ },
+ "27": {
+  "type": "DIFF_SCOPE",
+  "confidence": 0.95,
+  "judged_by": "groq/openai/gpt-oss-20b",
+  "a_claim_id": "e5fcae1b-7733-4a69-9a60-a99a7e8da3be",
+  "b_claim_id": "8bec424a-79ac-4a04-b2a7-b23b10b451ce"
+ },
+ "28": {
+  "type": "DIFF_SCOPE",
+  "confidence": 0.92,
+  "judged_by": "groq/openai/gpt-oss-20b",
+  "a_claim_id": "43c972af-1bc6-4891-85bf-1b6e2a39d4b3",
+  "b_claim_id": "af05fa4e-90db-4315-9f0a-5c68b6f7eb4e"
+ },
+ "29": {
+  "type": "DIFF_SCOPE",
+  "confidence": 0.9,
+  "judged_by": "groq/openai/gpt-oss-20b",
+  "a_claim_id": "acb6482f-4b5e-42aa-a3b6-0572b37e9e5f",
+  "b_claim_id": "ad6e8261-b411-46a8-9090-234b0585416c"
+ },
+ "30": {
+  "type": "DIFF_SCOPE",
+  "confidence": 0.85,
+  "judged_by": "groq/openai/gpt-oss-20b",
+  "a_claim_id": "d9fab988-4f95-4cda-a1e6-009dd681d342",
+  "b_claim_id": "27302086-f179-456e-8b06-81af975347a7"
+ },
+ "31": {
+  "type": "DIFF_SCOPE",
+  "confidence": 0.9,
+  "judged_by": "groq/openai/gpt-oss-20b",
+  "a_claim_id": "11973c4b-7b0c-4acf-8df3-ec6269c0442e",
+  "b_claim_id": "ce20abb1-328f-4c81-b3bd-9d4ec4ef7223"
+ },
+ "32": {
+  "type": "DIFF_SCOPE",
+  "confidence": 0.9,
+  "judged_by": "groq/openai/gpt-oss-20b",
+  "a_claim_id": "361a6a0c-9eca-4274-8409-d57f924724e6",
+  "b_claim_id": "ea46c168-f07d-476a-b2c8-2b5b93e77e92"
+ },
+ "33": {
+  "type": "DIFF_SCOPE",
+  "confidence": 0.9,
+  "judged_by": "groq/openai/gpt-oss-20b",
+  "a_claim_id": "eb024898-784c-4a6d-a15e-0572bcadc535",
+  "b_claim_id": "0aa54445-937a-46cf-923f-3d97f50a1812"
+ },
+ "34": {
+  "type": "DIFF_SCOPE",
+  "confidence": 0.9,
+  "judged_by": "groq/openai/gpt-oss-20b",
+  "a_claim_id": "eb825abc-e9eb-4f1e-9569-2eda1c2f9b93",
+  "b_claim_id": "1811875f-1bcf-4727-9da7-3398f69d9d97"
+ },
+ "35": {
+  "type": "DIFF_SCOPE",
+  "confidence": 0.9,
+  "judged_by": "groq/openai/gpt-oss-20b",
+  "a_claim_id": "b91b0f40-119a-4d40-8596-be2f85bbc71f",
+  "b_claim_id": "999d9276-97ea-4214-93bf-e2d4e9977d84"
+ },
+ "36": {
+  "type": "DIFF_SCOPE",
+  "confidence": 0.9,
+  "judged_by": "groq/openai/gpt-oss-20b",
+  "a_claim_id": "bf11ffb3-c500-49dc-9440-5f3810a4a36c",
+  "b_claim_id": "92c90ce8-6837-431c-bf20-8c0fc1c89481"
+ },
+ "37": {
+  "type": "DIFF_SCOPE",
+  "confidence": 0.9,
+  "judged_by": "groq/openai/gpt-oss-20b",
+  "a_claim_id": "522d5cfe-5afd-4579-8a23-e3bd382ce318",
+  "b_claim_id": "1976440e-24c5-422f-9399-e1396cb2335d"
+ },
+ "38": {
+  "type": "DIFF_SCOPE",
+  "confidence": 0.9,
+  "judged_by": "groq/openai/gpt-oss-20b",
+  "a_claim_id": "722af0a7-6249-417f-94d3-550bd010f1a4",
+  "b_claim_id": "f7ecc6b0-c77f-4170-9b9f-fcb8ae6527b5"
+ },
+ "39": {
+  "type": "UNRELATED",
+  "confidence": 0.95,
+  "judged_by": "groq/openai/gpt-oss-20b",
+  "a_claim_id": "8bb3c214-e7b6-41df-b9f3-4b8255cdf782",
+  "b_claim_id": "8765f59b-1ede-4434-baa5-f7d90641d4ec"
+ },
+ "40": {
+  "type": "UNRELATED",
+  "confidence": 0.95,
+  "judged_by": "groq/openai/gpt-oss-20b",
+  "a_claim_id": "af05fa4e-90db-4315-9f0a-5c68b6f7eb4e",
+  "b_claim_id": "f7ecc6b0-c77f-4170-9b9f-fcb8ae6527b5"
+ },
+ "41": {
+  "type": "UNRELATED",
+  "confidence": 0.95,
+  "judged_by": "groq/openai/gpt-oss-20b",
+  "a_claim_id": "bde2882b-05f3-4101-8e13-079ae388b997",
+  "b_claim_id": "0b6cb978-6d9a-43a7-958f-5214af88f72f"
+ },
+ "42": {
+  "type": "UNRELATED",
+  "confidence": 0.95,
+  "judged_by": "groq/openai/gpt-oss-20b",
+  "a_claim_id": "dd0af9f9-f70a-417c-98dd-896b5ec308fc",
+  "b_claim_id": "5d00ef90-35eb-4d2c-a724-be4589472a5b"
+ },
+ "43": {
+  "type": "UNRELATED",
+  "confidence": 0.95,
+  "judged_by": "groq/openai/gpt-oss-20b",
+  "a_claim_id": "8bb3c214-e7b6-41df-b9f3-4b8255cdf782",
+  "b_claim_id": "cb857946-54f6-4371-93ec-85182a50eb50"
+ },
+ "44": {
+  "type": "UNRELATED",
+  "confidence": 0.9,
+  "judged_by": "groq/openai/gpt-oss-20b",
+  "a_claim_id": "9a0c701f-f5bb-4b9b-9529-8055a9782b13",
+  "b_claim_id": "7aada2f2-2bc8-4bee-93f5-dbabe0a735cb"
+ },
+ "45": {
+  "type": "UNRELATED",
+  "confidence": 0.95,
+  "judged_by": "groq/openai/gpt-oss-20b",
+  "a_claim_id": "bf11ffb3-c500-49dc-9440-5f3810a4a36c",
+  "b_claim_id": "e2da61ff-396d-4c48-b2d7-2bbb868de505"
+ },
+ "46": {
+  "type": "UNRELATED",
+  "confidence": 0.9,
+  "judged_by": "groq/openai/gpt-oss-20b",
+  "a_claim_id": "f7445f8b-4283-4778-b370-4f8ac4a065d4",
+  "b_claim_id": "9fe3a367-a4bb-451c-954a-a31179cafa44"
+ },
+ "47": {
+  "type": "UNRELATED",
+  "confidence": 0.9,
+  "judged_by": "groq/openai/gpt-oss-20b",
+  "a_claim_id": "bf11ffb3-c500-49dc-9440-5f3810a4a36c",
+  "b_claim_id": "c60d8509-b057-4907-a8bc-390e33c40cde"
+ },
+ "48": {
+  "type": "UNRELATED",
+  "confidence": 0.95,
+  "judged_by": "groq/openai/gpt-oss-20b",
+  "a_claim_id": "b318c33e-7763-49b1-8146-1b4ae38e3275",
+  "b_claim_id": "46e7b068-a5f4-47bd-a682-6e81e50dc3e2"
+ },
+ "49": {
+  "type": "UNRELATED",
+  "confidence": 0.92,
+  "judged_by": "groq/openai/gpt-oss-20b",
+  "a_claim_id": "8bb3c214-e7b6-41df-b9f3-4b8255cdf782",
+  "b_claim_id": "ef4b8a49-a5d5-410f-b5a9-34ecff9a02a3"
+ },
+ "50": {
+  "type": "UNRELATED",
+  "confidence": 0.95,
+  "judged_by": "groq/openai/gpt-oss-20b",
+  "a_claim_id": "0217c3ab-c693-408f-89ca-a93c4badd573",
+  "b_claim_id": "9a815b16-1e45-4ae1-8b66-3ee9475fa473"
+ }
+}

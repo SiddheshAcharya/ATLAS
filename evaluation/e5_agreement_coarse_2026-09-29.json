@@ -1,0 +1,26 @@
+{
+ "post_hoc": "3-way taxonomy computed after seeing the 6-way results",
+ "mapping": {
+  "SUPPORTS": "consistent",
+  "EXTENDS": "consistent",
+  "REPLICATES": "consistent",
+  "CONTRADICTS": "conflict",
+  "DIFF_SCOPE": "no_link",
+  "UNRELATED": "no_link"
+ },
+ "results(agreement,kappa)": {
+  "n_pairs_usable": 15,
+  "human_vs_ai": [
+   0.333,
+   -0.071
+  ],
+  "human_vs_model": [
+   0.533,
+   0.087
+  ],
+  "ai_vs_model_on_all_50": [
+   0.58,
+   0.192
+  ]
+ }
+}

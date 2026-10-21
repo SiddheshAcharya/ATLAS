@@ -1,0 +1,27 @@
+{
+  "run_a": "8d78fb54-ddb2-4121-bc2e-b0685a89b59e",
+  "run_b": "782c319e-06bf-4318-b067-f5e79f79e948",
+  "same_read_order": true,
+  "papers_read": [
+    15,
+    15
+  ],
+  "same_claims": true,
+  "claims": [
+    65,
+    65
+  ],
+  "claims_only_in_a": 0,
+  "claims_only_in_b": 0,
+  "same_relations": true,
+  "relations": [
+    132,
+    132
+  ],
+  "relations_only_in_a": 0,
+  "relations_only_in_b": 0,
+  "stop_reason": [
+    "budget: 15 papers read",
+    "budget: 15 papers read"
+  ]
+}

@@ -1,0 +1,90 @@
+[
+  {
+    "label": "e2:full",
+    "ok": true,
+    "run_id": "33123211-276e-4d35-9f39-ad820f2927e8",
+    "elapsed_s": 834.1,
+    "papers_read": 15,
+    "stop_reason": "budget: 15 papers read",
+    "relations_judged": 132,
+    "contradictions": 1,
+    "clusters_covered": 13
+  },
+  {
+    "label": "e2:-pagerank",
+    "ok": true,
+    "run_id": "9340fa72-f983-4853-9255-b26bc8ba7dea",
+    "elapsed_s": 903.7,
+    "papers_read": 15,
+    "stop_reason": "budget: 15 papers read",
+    "relations_judged": 120,
+    "contradictions": 1,
+    "clusters_covered": 12
+  },
+  {
+    "label": "e2:-novelty",
+    "ok": true,
+    "run_id": "917e7b11-4148-4fdf-9512-2b3361d59ae0",
+    "elapsed_s": 871.7,
+    "papers_read": 15,
+    "stop_reason": "budget: 15 papers read",
+    "relations_judged": 156,
+    "contradictions": 1,
+    "clusters_covered": 13
+  },
+  {
+    "label": "e2:-contest",
+    "ok": true,
+    "run_id": "594c5e71-cc7d-4104-9d01-dc274d2db98b",
+    "elapsed_s": 298.7,
+    "papers_read": 15,
+    "stop_reason": "budget: 15 papers read",
+    "relations_judged": 120,
+    "contradictions": 1,
+    "clusters_covered": 13
+  },
+  {
+    "label": "e2:-recency",
+    "ok": true,
+    "run_id": "700d2992-0a87-4fd5-908d-ba102e5236d2",
+    "elapsed_s": 1067.2,
+    "papers_read": 15,
+    "stop_reason": "budget: 15 papers read",
+    "relations_judged": 84,
+    "contradictions": 0,
+    "clusters_covered": 10
+  },
+  {
+    "label": "e2:relevance_only",
+    "ok": true,
+    "run_id": "5a9c2e3f-d798-4d6e-959b-75149e28d9a0",
+    "elapsed_s": 1482.2,
+    "papers_read": 15,
+    "stop_reason": "budget: 15 papers read",
+    "relations_judged": 84,
+    "contradictions": 0,
+    "clusters_covered": 10
+  },
+  {
+    "label": "e3:bridge_on",
+    "ok": true,
+    "run_id": "617d2fb9-1e31-47ca-99d0-205ece6f09ca",
+    "elapsed_s": 330.0,
+    "papers_read": 15,
+    "stop_reason": "budget: 15 papers read",
+    "relations_judged": 120,
+    "contradictions": 1,
+    "clusters_covered": 12
+  },
+  {
+    "label": "e3:bridge_off",
+    "ok": true,
+    "run_id": "be93c751-bc4b-4d80-97e3-73d6464a77f1",
+    "elapsed_s": 315.0,
+    "papers_read": 15,
+    "stop_reason": "budget: 15 papers read",
+    "relations_judged": 120,
+    "contradictions": 1,
+    "clusters_covered": 12
+  }
+]

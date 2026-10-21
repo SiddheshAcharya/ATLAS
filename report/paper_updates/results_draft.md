@@ -1,0 +1,188 @@
+> **SUPERSEDED (2026-09-30).** This was the first draft. The final text, including the third (gut-microbiome) run, is in `ATLAS_FINAL_updated.docx` and `ATLAS_Blue_Book_updated.docx`; see `CHANGES_paper.md` / `CHANGES_bluebook.md`.
+
+# Draft results text for the research paper and the Blue Book
+
+Status: DRAFT for the team's approval — nothing here has been pasted into either document.
+Every number below comes from a file in `evaluation/`, the run database, or `docs/TESTING.md`
+as of 2026-09-29. Slots marked **[Q3 — after the gut-microbiome crawl]** are filled only once
+that run has actually finished; if it does not finish, delete those slots rather than estimate.
+
+---
+
+## A. Research paper (ATLAS_FINAL)
+
+### A.1 Abstract — replace the last two sentences
+
+Old: "A measured v0 build exposed four concrete failure modes … together with the evaluation
+protocol, baselines and target metrics against which the remaining work will be judged."
+
+New:
+> A measured v0 build exposed four failure modes that shaped this architecture, including an
+> edge density of 65.9 % and a dataset difference labelled CONTRADICTS at confidence 0.90. The
+> completed system was evaluated end to end on two research questions. 49 of 50 sampled claim
+> quotations were found verbatim in their sources (98 %, against a 95 % target); a replay of a
+> 15-paper run reproduced its reading order, 65 claims and 132 relations exactly with no new
+> model calls; and 93.7–98.1 % of candidate claim pairs were excluded before any model was
+> consulted. The foraging loop read a substantially different set of papers from similarity-
+> ranked retrieval (36–53 % overlap) and reached 7–60 % more of the surrounding citation network,
+> though not more citation clusters at a 15-paper budget. Relation adjudication and gap detection
+> are the weakest components: annotators themselves disagreed on relation labels (κ = −0.17), and
+> most detected gaps were artefacts of wording. We report both outcomes.
+
+### A.2 Section 4 — replace "anticipated performance" (4.3–4.7) with measured results
+
+Suggested opening paragraph for Section 4:
+> This section reports measured results from the completed system. Runs used a 15-paper
+> Standard budget on two research questions — IoT devices for women's safety, and federated
+> learning for medical imaging — on free-tier language models. Every model and API call was
+> cached, so each figure below can be regenerated from the stored run.
+
+#### 4.x Grounding accuracy
+
+> Fifty stored claims were sampled across runs and each source was re-fetched and checked for
+> the claim's quotation as an exact substring. 49 of 50 (98 %) were verbatim, exceeding the
+> 0.95 target. The single failure was traced to the PDF parser rather than the model: page 4 of
+> the source ends mid-sentence and page 5 opens with its page number, which the parser kept, so
+> the quotation "the last few 5 layers" faithfully reproduced what ATLAS had read. Page numbers
+> are now stripped at ingestion.
+>
+> The audit also exposed a loophole. A 97 %-similarity fallback, intended to absorb PDF noise,
+> had admitted four quotations containing real edits ("is set too high", "a"→"an", a dropped
+> "that", and the page number above). It would equally have admitted "increased"→"decreased".
+> The fallback now requires an exact match once only whitespace, hyphenation, quotation marks,
+> letter case and bracketed reference markers are ignored. Under the strict gate, the grounding
+> gate rejected 0 of 73, 0 of 65, 1 of 98 and 3 of 198 proposed claims on the four evaluated runs.
+
+#### 4.x Foraging behaviour against similarity-ranked retrieval
+
+> The baseline reads the top 25 papers by cosine similarity to the question, cut to the same
+> number of papers ATLAS read. Both sets were placed in one OpenAlex citation graph with a single
+> Louvain clustering, so the comparison is like for like.
+
+| Run (query, papers read) | Overlap with baseline | Citation clusters, ATLAS / baseline | References reached, ATLAS / baseline |
+|---|---|---|---|
+| IoT safety, 15 | 53 % | 8 / 9 | 115 / 92 |
+| IoT safety, 15 | 40 % | 9 / 9 | 147 / 92 |
+| Federated learning, 14 | 36 % | 10 / 8 | 355 / 332 |
+| Federated learning, 13 (GROBID) | 38 % | 11 / 9 | 452 / 332 |
+| **[Q3 — after the gut-microbiome crawl]** | | | |
+
+> ATLAS reads a substantially different set of papers (36–53 % overlap) and reaches 7–60 % more
+> of the reference network. At a 15-paper budget it is not broader in citation-cluster coverage
+> (−1, 0, +2, +2), and bridge promotion did not fire at this scale. The survey-recall protocol
+> and the 100-paper budget of the original plan were not run within the free-tier quota. An
+> earlier internal figure of "14 clusters versus ~1" compared two different clustering methods
+> on embeddings a bug had overwritten; it was withdrawn and does not appear here.
+
+#### 4.x Candidate-pair reduction and relation adjudication
+
+> Claim pairs are generated by nearest-neighbour search over claim embeddings, and only those
+> candidates are judged. On the three runs where judging ran to completion, 93.7 %, 95.0 % and
+> 98.1 % of all possible claim pairs were never sent to the model (for example, 132 of 2,628
+> pairs judged for 73 claims). DIFFERENT_SCOPE was used on 20–23 % of judged pairs.
+>
+> Accuracy of the judge could not be established, because the reference labels themselves were
+> unreliable. A human annotator from the team and an AI annotator independently labelled the same
+> claim pairs. On the 12 pairs the human labelled with a single verdict, they agreed on 2
+> (κ = −0.17). The human–judge agreement was also 2 of 12 (κ = −0.05), and the AI annotator–judge
+> agreement was 5 of 12 (κ = 0.22). Merging the labels into three classes (consistent /
+> conflict / no evidential link) did not rescue agreement (human–AI κ = −0.07). The
+> disagreement is systematic: whether consistent claims about two different devices count as
+> support or as a difference in scope. The relation taxonomy therefore needs written decision
+> rules before the judge can be scored. Measured against the AI annotator alone on 50 pairs,
+> DIFFERENT_SCOPE had precision 0.83 and recall 0.27. In every IoT run the corpus's only
+> CONTRADICTS verdict (NodeMCU versus Raspberry Pi Pico) was a false contradiction between two
+> independent devices. A stricter prompt removed it but lost 8 of 9 genuine SUPPORTS verdicts, so
+> it was not adopted.
+
+#### 4.x Gap quality
+
+> Gap lists from two IoT runs were rated blind to the detector that produced them. The first run
+> had 10 gaps: 2 plausible, 4 trivial, 4 wrong. The second had 6 gaps: 0 plausible, 1 trivial,
+> 5 wrong. Both ratings were made by an AI annotator. The dominant failure is vocabulary: concept
+> pairs reported as "never linked" are linked in the corpus under different wording. On the
+> federated-learning runs no gap survived the hard citation rule, because the full-text detectors
+> need a method or dataset reported by at least two papers and too few papers had full text. The
+> retrospective and blind-pairwise protocols were not carried out.
+
+#### 4.x Full-text parsing (GROBID)
+
+| Federated learning run | PDF text extraction | GROBID |
+|---|---|---|
+| Full-text ratio | 14 % | 23 % |
+| Claims kept | 97 | 195 |
+| Claims rejected by the gate | 1 | 3 |
+
+> Where full text was obtainable, GROBID roughly doubled the claims recovered and supplied
+> labelled sections. Open-access full text was scarce on these questions (a full-text ratio of 0–23 %
+> across runs), so most reading was abstract-level. This is the main reason both scope adjudication
+> and gap detection were starved.
+
+#### 4.x Reproducibility and cost
+
+> A 15-paper IoT run was replayed from its cache. It read the same papers in the same order and
+> produced identical claims (65) and relations (132), compared field by field. It made no new
+> model calls (all 145 served from cache) and finished in 6.7 minutes. Across 27 logged runs
+> (mean 9.5 papers), the LLM cache hit rate was 71.5 %, and measured token use costs at most
+> about US$0.05 per 15-paper run at paid rates; all runs here used free tiers. A fresh 15-paper
+> run takes 1–4 hours on the free tier (the 13-paper GROBID run took 3.3 h), a limit set by
+> per-minute and per-day token quotas rather than by computation.
+
+#### 4.x Implementation status (replaces 24.9 %)
+
+> All eleven subsystems of the pre-defined decomposition are implemented and exercised by the
+> runs above. The system has 153 unit tests, end-to-end and graph-store integration tests, and
+> browser smoke tests of the dashboard. Section 3.6 lists the components that differ from the
+> original design.
+>
+> *(The "as implemented" table — Groq/Gemini instead of Qwen/vLLM, bge instead of SPECTER2,
+> Louvain instead of Leiden, and so on — waits on the team's decision on how to present the
+> design changes.)*
+
+#### 4.9 Limitations — add
+
+> Runs were capped at 13–15 papers. Relation labels showed poor inter-annotator agreement, and
+> only one human annotator was involved, on 15 pairs. Gap ratings were made by an AI annotator.
+> The ablation of the scoring signals covers one query only. None of these figures has a
+> variance estimate.
+
+---
+
+## B. Blue Book — Chapter 5 (currently "Reserved")
+
+### 5.1 Outputs and Outcomes
+> The completed system was run end to end on two research questions at a 15-paper budget. Each
+> run produced: a live knowledge graph (read papers, the papers they cite, and typed relations
+> between claims); a report of agreements, contradictions, methods and ranked gaps with numbered
+> citations; and a chat interface that answers only from the run's claims. The chat refuses
+> questions nothing in the corpus addresses (for example, "Who won the 2018 FIFA World Cup?").
+> Every claim is shown with its verbatim quotation highlighted inside the text ATLAS read.
+> *(Figures: replace Figs 12–14 with the current dashboard screenshots — graph, paper view with
+> highlighted quotation, report.)*
+
+### 5.2 Analysis of Results and Interpretation of Data
+> Use the grounding, foraging, pair-reduction, relation, gap, GROBID and reproducibility
+> subsections of A.2 unchanged, together with their tables.
+
+### 5.3 Discussion of Results and Limitations of the System
+> Three results held clearly. The grounding contract works: 98 % of sampled quotations were
+> verbatim against a 95 % target, and the one failure was traced to the parser and fixed. Runs
+> are exactly reproducible from cache. Cost is negligible. The foraging loop reads differently
+> from similarity-ranked retrieval and reaches further into the citation network, but at 15
+> papers it is not yet broader in cluster coverage.
+>
+> The weakest parts are where ATLAS relates papers to each other. The only contradiction it
+> reported was false, and annotators could not agree on relation labels. Most detected gaps were
+> wording artefacts. ATLAS is therefore dependable as an evidence finder, since every claim is
+> traceable to a checked quotation. Its relations and gaps should be read as leads for a
+> researcher, not conclusions.
+>
+> The limitations in A.2 §4.9 apply: small runs, scarce open-access full text, one human
+> annotator, and free-tier throughput.
+
+### Also in the Blue Book (after approval)
+- Abstract, last sentence: "together with the evaluation protocol against which the completed
+  build will be judged" → "together with the measured results of that evaluation (Chapter 5)".
+- §1.6: Chapter 5 is no longer "reserved".
+- Table 9 (24 GB GPU) and §4.5.1 (seven Docker services): these describe the design and wait on
+  the same design-vs-implementation decision as the paper.

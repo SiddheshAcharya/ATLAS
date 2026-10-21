@@ -1,0 +1,45 @@
+{
+  "run_id": "4c1f35f3-780b-43c0-be53-588ac75f461f",
+  "query": "gut microbiome and depression",
+  "atlas_papers_read": 9,
+  "baseline_top_k": 25,
+  "overlap_count": 5,
+  "overlap_ratio": 0.556,
+  "mean_citation_count": {
+    "atlas": null,
+    "baseline": 192.1
+  },
+  "diversity_clusters_at_floor_0.55": {
+    "atlas": 1,
+    "baseline": 1,
+    "caveat": "This embedding-cosine metric answers a different question from atlas_only.distinct_louvain_clusters_covered below, and the two can legitimately disagree (e.g. both near 1). Every candidate here was retrieved *because* it matched the query topically, so abstract embeddings for both sets tend to clump into one semantic cluster regardless of which 25 (or 15) got picked \u2014 that's expected, not a bug. Louvain over the citation graph clusters by *citation structure* instead, which has nothing to do with abstract-text similarity and is the metric that actually speaks to breadth the loop can find and one-shot cosine ranking cannot."
+  },
+  "atlas_only": {
+    "mean_pagerank": null,
+    "contradictions_found": 1,
+    "gaps_found": 3
+  },
+  "citation_breadth": {
+    "graph_nodes": 1208,
+    "graph_edges": 1535,
+    "atlas": {
+      "papers": 9,
+      "papers_with_references": 8,
+      "clusters_covered": 7,
+      "distinct_references_reached": 381
+    },
+    "baseline": {
+      "papers": 25,
+      "papers_with_references": 24,
+      "clusters_covered": 20,
+      "distinct_references_reached": 1041
+    },
+    "baseline_top_9": {
+      "papers": 9,
+      "papers_with_references": 8,
+      "clusters_covered": 8,
+      "distinct_references_reached": 365
+    },
+    "note": "clusters_covered counts only papers with at least one OpenAlex reference (a paper with none would be its own singleton cluster and inflate breadth); compare papers_with_references too. Same graph, same clustering for both sets."
+  }
+}

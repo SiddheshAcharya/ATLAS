@@ -1,0 +1,72 @@
+{
+  "gap:unresolved_conflict:80d011447195": {
+    "type": "unresolved_conflict",
+    "rank": 1,
+    "found_by": [
+      "unresolved_conflict"
+    ]
+  },
+  "gap:unlinked_concepts:52c47c473df3": {
+    "type": "unlinked_concepts",
+    "rank": 2,
+    "found_by": [
+      "unlinked_concepts"
+    ]
+  },
+  "gap:unlinked_concepts:b68b1d34d493": {
+    "type": "unlinked_concepts",
+    "rank": 3,
+    "found_by": [
+      "unlinked_concepts"
+    ]
+  },
+  "gap:unlinked_concepts:db047392dc34": {
+    "type": "unlinked_concepts",
+    "rank": 3,
+    "found_by": [
+      "unlinked_concepts"
+    ]
+  },
+  "gap:unlinked_concepts:9415f7879998": {
+    "type": "unlinked_concepts",
+    "rank": 4,
+    "found_by": [
+      "unlinked_concepts"
+    ]
+  },
+  "gap:unlinked_concepts:ed18dfa893cf": {
+    "type": "unlinked_concepts",
+    "rank": 5,
+    "found_by": [
+      "unlinked_concepts"
+    ]
+  },
+  "gap:unlinked_concepts:39a73650108b": {
+    "type": "unlinked_concepts",
+    "rank": 5,
+    "found_by": [
+      "unlinked_concepts"
+    ]
+  },
+  "gap:unlinked_concepts:630ea3ca50a1": {
+    "type": "unlinked_concepts",
+    "rank": 6,
+    "found_by": [
+      "unlinked_concepts"
+    ]
+  },
+  "gap:unlinked_concepts:b5deddd0d06b": {
+    "type": "unlinked_concepts",
+    "rank": 6,
+    "found_by": [
+      "unlinked_concepts"
+    ]
+  },
+  "gap:unlinked_concepts:c4c62a5adb9e": {
+    "type": "unlinked_concepts",
+    "rank": 7,
+    "found_by": [
+      "unlinked_concepts"
+    ]
+  }
+}

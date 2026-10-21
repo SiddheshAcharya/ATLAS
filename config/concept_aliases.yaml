@@ -1,0 +1,23 @@
+# Manual alias curation for concept normalization (RISKS.md R4).
+# Hand-curating ~40 aliases for your demo domain is a legitimate engineering
+# choice and takes about an hour. Canonical label on the left.
+iot device:
+  - iot devices
+  - internet of things device
+  - internet-of-things device
+  - IoT-based device
+gps tracking:
+  - gps tracker
+  - global positioning system tracking
+  - real-time location tracking
+panic button:
+  - emergency button
+  - sos button
+  - distress button
+wearable device:
+  - wearable
+  - wearables
+  - smart wearable
+  - smart wearable device
+  - wearable technology
+  - various wearables

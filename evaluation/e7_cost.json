@@ -1,0 +1,129 @@
+{
+  "per_run": [
+    {
+      "run_id": "1f3a2ae3-1cf3-48c3-b139-4bf5ef27593b",
+      "mode": "standard",
+      "papers_read": 6,
+      "full_text_ratio": 0.667,
+      "wall_clock_seconds": 3811.0,
+      "n_calls": 81,
+      "cache_hits": 3,
+      "cache_hit_rate": 0.037,
+      "prompt_tokens": 119699,
+      "output_tokens": 87573,
+      "usd": 0.004882,
+      "usd_per_paper": 0.00081
+    },
+    {
+      "run_id": "13a4c9da-916b-4b5a-a9d5-ff047b95c464",
+      "mode": "standard",
+      "papers_read": 3,
+      "full_text_ratio": 0.0,
+      "wall_clock_seconds": 133.0,
+      "n_calls": 2,
+      "cache_hits": 1,
+      "cache_hit_rate": 0.5,
+      "prompt_tokens": 2441,
+      "output_tokens": 2511,
+      "usd": 0.001224,
+      "usd_per_paper": 0.00041
+    },
+    {
+      "run_id": "9fa0c069-8a03-4294-8c75-a94c61d4c6a2",
+      "mode": "standard",
+      "papers_read": 3,
+      "full_text_ratio": 0.0,
+      "wall_clock_seconds": 832.0,
+      "n_calls": 16,
+      "cache_hits": 1,
+      "cache_hit_rate": 0.062,
+      "prompt_tokens": 16772,
+      "output_tokens": 12770,
+      "usd": 0.00296,
+      "usd_per_paper": 0.00099
+    },
+    {
+      "run_id": "a0e32253-6a67-46e5-9b4e-6273c0aa1673",
+      "mode": "standard",
+      "papers_read": 15,
+      "full_text_ratio": 0.067,
+      "wall_clock_seconds": 2750.0,
+      "n_calls": 152,
+      "cache_hits": 68,
+      "cache_hit_rate": 0.447,
+      "prompt_tokens": 157855,
+      "output_tokens": 125111,
+      "usd": 0.005526,
+      "usd_per_paper": 0.00037
+    },
+    {
+      "run_id": "2f291ab2-5b63-4fe1-b5f6-77ea8bcc6e5a",
+      "mode": "standard",
+      "papers_read": 5,
+      "full_text_ratio": 0.0,
+      "wall_clock_seconds": 52.0,
+      "n_calls": 40,
+      "cache_hits": 40,
+      "cache_hit_rate": 1.0,
+      "prompt_tokens": 39063,
+      "output_tokens": 32687,
+      "usd": 0.0,
+      "usd_per_paper": 0.0
+    },
+    {
+      "run_id": "e899d92c-f855-451e-b86e-3ea5ceb44c40",
+      "mode": "standard",
+      "papers_read": 5,
+      "full_text_ratio": 0.0,
+      "wall_clock_seconds": 55.0,
+      "n_calls": 40,
+      "cache_hits": 40,
+      "cache_hit_rate": 1.0,
+      "prompt_tokens": 39063,
+      "output_tokens": 32687,
+      "usd": 0.0,
+      "usd_per_paper": 0.0
+    },
+    {
+      "run_id": "06c12d5a-2a6e-4b01-8ddc-dba3841375dc",
+      "mode": "standard",
+      "papers_read": 5,
+      "full_text_ratio": 0.0,
+      "wall_clock_seconds": 801.0,
+      "n_calls": 40,
+      "cache_hits": 16,
+      "cache_hit_rate": 0.4,
+      "prompt_tokens": 39063,
+      "output_tokens": 32687,
+      "usd": 0.0,
+      "usd_per_paper": 0.0
+    },
+    {
+      "run_id": "d3f6e86f-87ee-435c-9dd5-1069753394c6",
+      "mode": "standard",
+      "papers_read": 12,
+      "full_text_ratio": 0.0,
+      "wall_clock_seconds": 311.0,
+      "n_calls": 92,
+      "cache_hits": 73,
+      "cache_hit_rate": 0.793,
+      "prompt_tokens": 96713,
+      "output_tokens": 73748,
+      "usd": 0.0,
+      "usd_per_paper": 0.0
+    }
+  ],
+  "per_mode": {
+    "standard": {
+      "n_runs": 8,
+      "mean_papers_read": 6.8,
+      "mean_wall_clock_seconds": 1093.1,
+      "mean_usd": 0.0018,
+      "mean_usd_per_paper": 0.00032,
+      "mean_prompt_tokens": 63834.0,
+      "mean_output_tokens": 49972.0,
+      "mean_cache_hit_rate": 0.53,
+      "mean_full_text_ratio": 0.092
+    }
+  }
+}

@@ -1,0 +1,21 @@
+# The 3 frozen evaluation queries (docs/TESTING.md Part 2). Never edit ad hoc once a
+# real evaluation run has been made against one — the whole point is comparing runs
+# against the same fixed query. Add a new query instead if you need to explore.
+
+queries:
+  - id: iot_safety
+    query: "IoT devices for women safety"
+    shape: "applied engineering query — sparse literature, mixed venue quality, mostly
+      regional conference papers, low full-text ratio"
+    notes: "the query used throughout Phases 1-6 development; the most-covered by
+      existing real runs (see evaluation/runs.md once populated)"
+
+  - id: federated_learning_medical
+    query: "federated learning for medical imaging"
+    shape: "well-studied CS topic — dense, citation-rich, high full-text ratio expected
+      (arXiv-heavy), many competing methods to find agreement/contradiction in"
+
+  - id: biomedical
+    query: "gut microbiome and depression"
+    shape: "biomedical query — exercises PubMed specifically, tests full-text
+      availability from a different ecosystem (journal paywalls vs arXiv/OA)"

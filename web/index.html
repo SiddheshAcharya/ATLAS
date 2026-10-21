@@ -1,0 +1,31 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ATLAS</title>
+    <meta name="description" content="ATLAS — agentic literature review with verbatim, machine-checked quotes" />
+    <meta name="theme-color" content="#0a0a0a" media="(prefers-color-scheme: dark)" />
+    <meta name="theme-color" content="#f5efe6" media="(prefers-color-scheme: light)" />
+    <style>
+      /* page colour before the CSS bundle arrives (matches --color-ink-950 in index.css) */
+      html { background: #0a0a0a; }
+      html[data-theme="light"] { background: #f5efe6; }
+    </style>
+    <script>
+      // Apply the saved (or system) theme before first paint — no dark flash on a light projector.
+      try {
+        var t = localStorage.getItem("atlas-theme");
+        if (!t) t = matchMedia("(prefers-color-scheme: light)").matches ? "light" : "dark";
+        document.documentElement.dataset.theme = t;
+      } catch (e) {
+        document.documentElement.dataset.theme = "dark";
+      }
+    </script>
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
+</html>

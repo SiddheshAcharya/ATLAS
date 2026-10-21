@@ -1,0 +1,108 @@
+# Frontier scoring, admission bands, bridge promotion, stopping criteria.
+# Every value here is an experiment knob — the evaluation chapter (docs/TESTING.md)
+# is a table of what happens when you change them. Never hardcode these in Python.
+
+weights:
+  relevance: 0.35
+  pagerank:  0.20
+  novelty:   0.15
+  contest:   0.15
+  recency:   0.15        # must sum to 1.0
+
+bands:
+  drop_below: 0.20       # cosine < this -> not tracked at all
+  park_below: 0.35       # [drop_below, park_below) -> parked pool
+
+recency:
+  half_life_years: 4.0   # 8 for slow fields, 2 for fast-moving ones
+
+pagerank:
+  every_n_papers: 10
+  damping: 0.85
+
+novelty:
+  enabled: true
+
+contest:
+  min_confidence: 0.7    # floor for a CONTRADICTS edge to count
+
+bridge:
+  enabled: true
+  min_clusters: 2
+  # tuned down from the spec's 3 on 2026-09-11: a real 15-paper standard-mode run
+  # (14 Louvain clusters, best-populated had 2 reads) never got a single cluster to 3 —
+  # novelty scoring spreads reads across clusters, which structurally fights
+  # concentrating 3 reads in one. 2 gives a real shot at this scale; revisit on deep/
+  # extra_deep runs where clusters can actually accumulate more reads.
+  min_cluster_size: 2
+  min_bridge_links: 2
+  bonus: 0.15
+  max_promotions_per_run: 15
+
+seed:
+  k: 20                        # top-K by relevance seeded into the frontier
+
+expansion:
+  max_references_per_paper: 60
+  max_citers_per_paper: 60
+  citer_sort: cited_by_count_desc
+
+stopping:
+  min_papers: 10
+  alpha: 0.3                 # EMA smoothing for new_info
+  saturation_ratio: 0.15     # stop when ema < ratio * max(ema)
+  saturation_patience: 3
+  read_below_score: 0.25
+  new_info_weights: {claims: 1, contradictions: 2, concepts: 3}
+
+# max_minutes assumed a fast Haiku-class judge; on the free-tier path (Groq, paced to
+# 7k tok/min — ADR-012) Job C is inherently slower, so `standard` is widened to let a
+# run actually reach `papers` instead of timing out early. Revisit once on paid/faster
+# models or the strong PC.
+# 2026-09-28: standard 45 -> 240. At 45 min a free-tier run stopped on the clock after
+# ~5-7 papers (a0e32253: "46 minutes elapsed"), so how many papers a run read depended on
+# Groq's speed that day, not on ATLAS — runs weren't comparable. The evaluation caps
+# papers explicitly (--max-papers 15); the clock is now only a runaway guard.
+modes:
+  standard:   {papers: 25,  max_usd: 3.0,  max_minutes: 240}
+  deep:       {papers: 75,  max_usd: 10.0, max_minutes: 120}
+  extra_deep: {papers: 200, max_usd: 30.0, max_minutes: 240}
+
+chunking:
+  size: 1000
+  overlap: 150
+  respect_sections: true
+
+judging:
+  knn_k: 10
+  similarity_floor: 0.55
+  batch_size: 10
+  pairs_per_paper: 12          # cap on kNN pairs judged for one paper's new claims
+  max_calls_per_run: 400       # protect the LLM quota over a whole run
+
+gaps:
+  max_gaps: 15
+  max_candidates_per_detector: 50   # safety valve before fusion trims to max_gaps
+  dedup_similarity: 0.85
+  dedup_jaccard: 0.6
+  rrf_k: 60
+  corroboration_bonus: 0.15
+  pmi_tau: 0.0            # positive-PMI cutoff for detector 1 (GAP_DETECTORS.md has no
+                           # numeric default; PMI>0 = "more co-occurrence than chance")
+  detector_weights:
+    unlinked_concepts:    1.0
+    predicted_links:      0.7
+    empty_combinations:   0.9
+    unanswered_calls:     1.1
+    unresolved_conflicts: 1.2
+    shared_weaknesses:    1.0
+  thresholds:
+    min_support: 2
+    min_method_papers: 3
+    min_dataset_papers: 3
+    answered_threshold: 0.62
+    answered_threshold_nocite: 0.75
+    call_min_age_years: 2
+    weakness_min_cluster_size: 3
+    weakness_min_papers: 4
+    weakness_min_author_groups: 3

@@ -1,0 +1,13 @@
+{
+  "run_id": "8d78fb54-ddb2-4121-bc2e-b0685a89b59e",
+  "rated_by": "AI assistant (Claude), 2026-09-29, from the blinded sheet evaluation/e6_sheet_8d78fb54.md; not human-verified",
+  "ratings": {
+    "1": {"rating": "wrong", "reason": "devices in this corpus routinely combine sensor monitoring with a panic button; only the wording differs"},
+    "2": {"rating": "trivial", "reason": "vague extracted phrases; technically never co-occur but not a meaningful research gap"},
+    "3": {"rating": "wrong", "reason": "GSM alerting during an attack is the core function of most devices in the corpus"},
+    "4": {"rating": "wrong", "reason": "continuous monitoring plus GSM alerts is the standard design in the corpus"},
+    "5": {"rating": "wrong", "reason": "the whole corpus is about women's-safety emergencies"},
+    "6": {"rating": "wrong", "reason": "near-synonyms (an IoT device is the smart responsive safety system)"}
+  },
+  "counts": {"plausible": 0, "trivial": 1, "wrong": 5}
+}

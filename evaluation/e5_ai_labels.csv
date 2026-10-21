@@ -1,0 +1,51 @@
+﻿pair,ai_label,reason
+1,DIFF_SCOPE,AI in imaging generally vs FL specifically; neither is evidence for the other
+2,DIFF_SCOPE,two different alert devices
+3,DIFF_SCOPE,one EEG/heartbeat device vs a review's sensor-prevalence finding
+4,DIFF_SCOPE,two reviews describing their own coverage/time span
+5,DIFF_SCOPE,a specific device vs a review recommendation on sensor fusion
+6,DIFF_SCOPE,same as pair 3
+7,DIFF_SCOPE,a review's stated coverage vs a finding on technologies used
+8,SUPPORTS,two reviews reach the same finding: pressure + pulse/heart-rate sensors dominate
+9,UNRELATED,one device's microcontroller vs a review's sensor finding: different questions
+10,SUPPORTS,same claim: FL enables privacy-preserving collaborative training across institutions
+11,SUPPORTS,near-identical finding: pressure and pulse-rate sensors most used
+12,SUPPORTS,B's finding (medical datasets are hard for FL optimisers) substantiates A's concern about natural-image-only evaluation
+13,DIFF_SCOPE,"NodeMCU device vs Raspberry Pi Pico device: different systems, not a disagreement"
+14,DIFF_SCOPE,same as pair 13
+15,DIFF_SCOPE,a specific device vs a proposed reference architecture
+16,DIFF_SCOPE,one system's vital-sign monitoring vs a review's sensor finding
+17,DIFF_SCOPE,components of two different systems
+18,DIFF_SCOPE,two different systems
+19,DIFF_SCOPE,two different systems
+20,DIFF_SCOPE,one GPS/SMS device vs another project's general claim
+21,UNRELATED,FL suitability for medical imaging vs one-shot FL communication efficiency
+22,DIFF_SCOPE,two different system architectures
+23,DIFF_SCOPE,two different wearable devices
+24,DIFF_SCOPE,two different devices
+25,SUPPORTS,CT/MRI reconstruction is an independent instance of A's general privacy-preserving FL claim
+26,DIFF_SCOPE,a specific device vs a reference architecture
+27,DIFF_SCOPE,two different FL methods (segmentation framework vs diffusion augmentation)
+28,DIFF_SCOPE,90% vs 35% look contradictory but measure different things (any violence vs abuse/physical violence; different sources)
+29,DIFF_SCOPE,a review's stated coverage vs a finding on ML methods
+30,DIFF_SCOPE,two different incident-alert systems
+31,DIFF_SCOPE,"both describe one-shot FL, but possibly different methods; low confidence (could be SUPPORTS if same method)"
+32,DIFF_SCOPE,a specific device vs a review finding on technologies
+33,DIFF_SCOPE,two different devices with overlapping sensors
+34,DIFF_SCOPE,a review's stated coverage vs another review's sensor finding
+35,UNRELATED,a model's accuracy figure vs a generic statement about the technology
+36,DIFF_SCOPE,two different alert devices
+37,DIFF_SCOPE,two different systems
+38,UNRELATED,violence prevalence statistic vs a generic claim about a technology
+39,DIFF_SCOPE,a review's finding vs another review's scope description
+40,UNRELATED,violence prevalence statistic vs a generic claim about a technology
+41,UNRELATED,social reporting behaviour vs a vibration-sensor threshold
+42,DIFF_SCOPE,two different devices
+43,UNRELATED,which sensors are common vs why IoT matters for protection
+44,DIFF_SCOPE,a review's sensor finding vs a specific device
+45,DIFF_SCOPE,two different devices
+46,DIFF_SCOPE,"FL optimiser performance variance vs FL's potential for data scarcity: related, not conflicting"
+47,DIFF_SCOPE,two different devices
+48,DIFF_SCOPE,a specific system vs a reference architecture
+49,UNRELATED,sensor prevalence vs one project's value claim
+50,DIFF_SCOPE,global WHO prevalence vs India-specific situation and system problems

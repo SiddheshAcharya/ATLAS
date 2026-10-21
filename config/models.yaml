@@ -1,0 +1,91 @@
+# Which model does which job. Six jobs, very different profiles — do not collapse
+# them into one model. Job C dominates call volume and will eat the budget.
+# Model strings are LiteLLM-routed: change provider by changing the string.
+# Job E (label_cluster, Phase 5) is one call per surviving weakness cluster — rare,
+# cheap; routed with `judge` (small/fast) everywhere.
+# Job F (chat, Phase 6) is one call per user message — also routed with `judge`
+# everywhere; it's a short, retrieval-grounded answer, not a long-context job.
+# 2026-09-11: gemini-2.5-pro was retired for new API keys mid-project ("no longer
+# available to new users" 404) — synthesis now runs on gemini-2.5-flash everywhere.
+# If Google retires flash too, check `GET generativelanguage.googleapis.com/v1/models`.
+
+default_profile: groq
+
+profiles:
+  # `hybrid`: small jobs on Groq, long-context on Gemini — the best free-tier quality,
+  # BUT Gemini free is 20 requests/day so it only works for a handful of papers. Use it
+  # when there's Gemini budget; otherwise `groq` (the default) with the rate-limit pacer.
+  hybrid:
+    keywords:  {model: "groq/openai/gpt-oss-20b",  temperature: 0, max_tokens: 2000}
+    claims:    {model: "gemini/gemini-2.5-flash",  temperature: 0, max_tokens: 6000}
+    judge:     {model: "groq/openai/gpt-oss-20b",  temperature: 0, max_tokens: 2500}
+    synthesis: {model: "gemini/gemini-2.5-flash",  temperature: 0, max_tokens: 16000}
+    label_cluster: {model: "groq/openai/gpt-oss-20b", temperature: 0, max_tokens: 1000}
+    chat:      {model: "groq/openai/gpt-oss-20b",  temperature: 0, max_tokens: 1500}
+
+  # Groq free tier — the current working default. Model strings are LiteLLM-routed.
+  # Groq rotates its catalog often; if a call 400s with "model_not_found", list the
+  # live models with  GET https://api.groq.com/openai/v1/models  and update here.
+  # gpt-oss are reasoning models: they spend completion tokens thinking before the
+  # answer, so keep max_tokens generous even for short outputs. Structured output uses
+  # instructor Mode.MD_JSON (llm/client.py) — these models emit fenced JSON and reject
+  # forced tool calls with a 400.
+  groq:
+    keywords:  {model: "groq/openai/gpt-oss-20b",  temperature: 0, max_tokens: 2000}
+    claims:    {model: "groq/openai/gpt-oss-120b", temperature: 0, max_tokens: 4000}
+    judge:     {model: "groq/openai/gpt-oss-20b",  temperature: 0, max_tokens: 2500}
+    # synthesis (Job D) runs once per run and sends the *whole* graph summary in one
+    # prompt — that alone can exceed Groq's 8k-tokens/MINUTE cap in a single request,
+    # which the rate-limit pacer cannot fix (it paces call timing, not request size).
+    # One-per-run is cheap even against Gemini's daily quota, so send it there instead.
+    synthesis: {model: "gemini/gemini-2.5-flash", temperature: 0, max_tokens: 16000}
+    label_cluster: {model: "groq/openai/gpt-oss-20b", temperature: 0, max_tokens: 1000}
+    chat:      {model: "groq/openai/gpt-oss-20b",  temperature: 0, max_tokens: 1500}
+
+  cloud:
+    keywords:  {model: "anthropic/claude-sonnet-5",              temperature: 0, max_tokens: 1500}
+    claims:    {model: "anthropic/claude-sonnet-5",              temperature: 0, max_tokens: 4000}
+    judge:     {model: "anthropic/claude-haiku-4-5-20251001",    temperature: 0, max_tokens: 2000}
+    synthesis: {model: "anthropic/claude-opus-5",                temperature: 0, max_tokens: 16000}
+    label_cluster: {model: "anthropic/claude-haiku-4-5-20251001", temperature: 0, max_tokens: 1000}
+    chat:      {model: "anthropic/claude-haiku-4-5-20251001",     temperature: 0, max_tokens: 1500}
+
+  cheap:   # Google AI Studio free tier — GEMINI_API_KEY. Backup for `groq`.
+    keywords:  {model: "gemini/gemini-2.5-flash", temperature: 0, max_tokens: 2000}
+    claims:    {model: "gemini/gemini-2.5-flash", temperature: 0, max_tokens: 6000}
+    judge:     {model: "gemini/gemini-2.5-flash", temperature: 0, max_tokens: 3000}
+    synthesis: {model: "gemini/gemini-2.5-flash", temperature: 0, max_tokens: 16000}
+    label_cluster: {model: "gemini/gemini-2.5-flash", temperature: 0, max_tokens: 1000}
+    chat:      {model: "gemini/gemini-2.5-flash", temperature: 0, max_tokens: 1500}
+
+  local:    # demo-day insurance: no network, no keys. Keep this path tested.
+    keywords:  {model: "ollama/qwen2.5:7b-instruct",  temperature: 0, max_tokens: 1500}
+    claims:    {model: "ollama/qwen2.5:14b-instruct", temperature: 0, max_tokens: 4000}
+    judge:     {model: "ollama/qwen2.5:7b-instruct",  temperature: 0, max_tokens: 2000}
+    synthesis: {model: "ollama/qwen2.5:14b-instruct", temperature: 0, max_tokens: 8000}
+    label_cluster: {model: "ollama/qwen2.5:7b-instruct", temperature: 0, max_tokens: 1000}
+    chat:      {model: "ollama/qwen2.5:7b-instruct", temperature: 0, max_tokens: 1500}
+
+prompts:            # version enters the LLM cache key — bump on every edit
+  keywords:  keywords.v1.md
+  claims:    claims.v1.md
+  judge:     judge.v1.md
+  synthesis: synthesis.v1.md
+  label_cluster: label_cluster.v1.md
+  chat:      chat.v1.md
+
+# Client-side pacing (llm/client.py). Keyed by the LiteLLM provider prefix. The client
+# estimates each call's token cost and waits so the trailing-60s usage stays under `tpm`.
+# Groq free tier is org-wide 8k tokens/min; leave headroom. A provider not listed here
+# is not paced. `local` (Ollama) needs no limit.
+rate_limits:
+  groq:   {tpm: 7000, rpm: 25}
+  gemini: {rpm: 14}          # free tier is ~15 req/min AND 20/day — pacing can't fix the day cap
+
+cache:
+  enabled: true
+  ttl_days: 90
+
+budget:
+  warn_usd_per_run: 5.0
+  hard_stop_uses_mode_limit: true

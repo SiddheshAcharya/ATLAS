@@ -1,0 +1,2976 @@
+{
+ "meta": {
+  "count": 120851,
+  "db_response_time_ms": 229,
+  "page": 1,
+  "per_page": 20,
+  "groups_count": null,
+  "x_query": {
+   "oql": "works where full text has (women safety alert system)",
+   "oqo": {
+    "get_rows": "works",
+    "filter_rows": [
+     {
+      "column_id": "fulltext.search",
+      "value": "women safety alert system",
+      "operator": "has"
+     }
+    ]
+   },
+   "url": "/works?filter=fulltext.search:women safety alert system&per_page=20"
+  },
+  "cost_usd": 0.001
+ },
+ "results": [
+  {
+   "id": "https://openalex.org/W2137983259",
+   "doi": "https://doi.org/10.1056/nejmoa0807646",
+   "title": "Rosuvastatin to Prevent Vascular Events in Men and Women with Elevated C-Reactive Protein",
+   "display_name": "Rosuvastatin to Prevent Vascular Events in Men and Women with Elevated C-Reactive Protein",
+   "publication_year": 2008,
+   "primary_location": {
+    "id": "doi:10.1056/nejmoa0807646",
+    "is_oa": true,
+    "landing_page_url": "https://doi.org/10.1056/nejmoa0807646",
+    "pdf_url": "https://www.nejm.org/doi/media/10.1056/NEJMoa0807646/nejmoa0807646_comments.pdf?area=",
+    "source": {
+     "id": "https://openalex.org/S62468778",
+     "display_name": "New England Journal of Medicine",
+     "issn_l": "0028-4793",
+     "issn": [
+      "0028-4793",
+      "0096-6762",
+      "1533-4406",
+      "2331-4710"
+     ],
+     "is_oa": false,
+     "is_in_doaj": false,
+     "is_core": true,
+     "host_organization": "https://openalex.org/P4310320239",
+     "host_organization_name": "Massachusetts Medical Society",
+     "host_organization_lineage": [
+      "https://openalex.org/P4310320239"
+     ],
+     "host_organization_lineage_names": [
+      "Massachusetts Medical Society"
+     ],
+     "type": "journal"
+    },
+    "license": null,
+    "license_id": null,
+    "version": "publishedVersion",
+    "is_accepted": true,
+    "is_published": true,
+    "raw_source_name": "New England Journal of Medicine",
+    "raw_type": "journal-article"
+   },
+   "best_oa_location": {
+    "id": "doi:10.1056/nejmoa0807646",
+    "is_oa": true,
+    "landing_page_url": "https://doi.org/10.1056/nejmoa0807646",
+    "pdf_url": "https://www.nejm.org/doi/media/10.1056/NEJMoa0807646/nejmoa0807646_comments.pdf?area=",
+    "source": {
+     "id": "https://openalex.org/S62468778",
+     "display_name": "New England Journal of Medicine",
+     "issn_l": "0028-4793",
+     "issn": [
+      "0028-4793",
+      "0096-6762",
+      "1533-4406",
+      "2331-4710"
+     ],
+     "is_oa": false,
+     "is_in_doaj": false,
+     "is_core": true,
+     "host_organization": "https://openalex.org/P4310320239",
+     "host_organization_name": "Massachusetts Medical Society",
+     "host_organization_lineage": [
+      "https://openalex.org/P4310320239"
+     ],
+     "host_organization_lineage_names": [
+      "Massachusetts Medical Society"
+     ],
+     "type": "journal"
+    },
+    "license": null,
+    "license_id": null,
+    "version": "publishedVersion",
+    "is_accepted": true,
+    "is_published": true,
+    "raw_source_name": "New England Journal of Medicine",
+    "raw_type": "journal-article"
+   },
+   "authorships": [
+    {
+     "author_position": "first",
+     "author": {
+      "id": "https://openalex.org/A5091595592",
+      "display_name": "Paul M. Ridker",
+      "orcid": "https://orcid.org/0000-0003-1249-4522"
+     },
+     "institutions": [
+      {
+       "id": "https://openalex.org/I1283280774",
+       "display_name": "Brigham and Women's Hospital",
+       "ror": "https://ror.org/04b6nzv94",
+       "country_code": "US",
+       "type": "healthcare",
+       "lineage": [
+        "https://openalex.org/I1283280774",
+        "https://openalex.org/I48633490"
+       ]
+      },
+      {
+       "id": "https://openalex.org/I136199984",
+       "display_name": "Harvard University",
+       "ror": "https://ror.org/03vek6s52",
+       "country_code": "US",
+       "type": "education",
+       "lineage": [
+        "https://openalex.org/I136199984"
+       ]
+      }
+     ],
+     "countries": [
+      "US"
+     ],
+     "is_corresponding": false,
+     "raw_author_name": "Paul M Ridker",
+     "raw_affiliation_strings": [
+      "Center for Cardiovascular Disease Prevention, Brigham and Women's Hospital, Harvard Medical School, Boston, MA 02215, USA. pridker@partners.org",
+      "Center for Cardiovascular Disease Prevention, Brigham and Women's Hospital, Harvard Medical School, Boston",
+      "Division of Cardiovascular Medicine, Brigham and Women's Hospital, Harvard Medical School, Boston"
+     ],
+     "raw_orcid": null,
+     "affiliations": [
+      {
+       "raw_affiliation_string": "Center for Cardiovascular Disease Prevention, Brigham and Women's Hospital, Harvard Medical School, Boston, MA 02215, USA. pridker@partners.org",
+       "institution_ids": [
+        "https://openalex.org/I1283280774",
+        "https://openalex.org/I136199984"
+       ]
+      },
+      {
+       "raw_affiliation_string": "Center for Cardiovascular Disease Prevention, Brigham and Women's Hospital, Harvard Medical School, Boston",
+       "institution_ids": [
+        "https://openalex.org/I1283280774",
+        "https://openalex.org/I136199984"
+       ]
+      },
+      {
+       "raw_affiliation_string": "Division of Cardiovascular Medicine, Brigham and Women's Hospital, Harvard Medical School, Boston",
+       "institution_ids": [
+        "https://openalex.org/I1283280774",
+        "https://openalex.org/I136199984"
+       ]
+      }
+     ]
+    },
+    {
+     "author_position": "middle",
+     "author": {
+      "id": null,
+      "display_name": "Eleanor Danielson",
+      "orcid": null
+     },
+     "institutions": [
+      {
+       "id": "https://openalex.org/I1283280774",
+       "display_name": "Brigham and Women's Hospital",
+       "ror": "https://ror.org/04b6nzv94",
+       "country_code": "US",
+       "type": "healthcare",
+       "lineage": [
+        "https://openalex.org/I1283280774",
+        "https://openalex.org/I48633490"
+       ]
+      },
+      {
+       "id": "https://openalex.org/I136199984",
+       "display_name": "Harvard University",
+       "ror": "https://ror.org/03vek6s52",
+       "country_code": "US",
+       "type": "education",
+       "lineage": [
+        "https://openalex.org/I136199984"
+       ]
+      }
+     ],
+     "countries": [
+      "US"
+     ],
+     "is_corresponding": false,
+     "raw_author_name": "Eleanor Danielson",
+     "raw_affiliation_strings": [
+      "Center for Cardiovascular Disease Prevention, Brigham and Women's Hospital, Harvard Medical School, Boston"
+     ],
+     "raw_orcid": null,
+     "affiliations": [
+      {
+       "raw_affiliation_string": "Center for Cardiovascular Disease Prevention, Brigham and Women's Hospital, Harvard Medical School, Boston",
+       "institution_ids": [
+        "https://openalex.org/I1283280774",
+        "https://openalex.org/I136199984"
+       ]
+      }
+     ]
+    },
+    {
+     "author_position": "middle",
+     "author": {
+      "id": "https://openalex.org/A5030391700",
+      "display_name": "Francisco Ant\u00f4nio Helfenstein Fonseca",
+      "orcid": "https://orcid.org/0000-0002-9911-4598"
+     },
+     "institutions": [
+      {
+       "id": "https://openalex.org/I88273585",
+       "display_name": "Universidade Federal de S\u00e3o Paulo",
+       "ror": "https://ror.org/02k5swt12",
+       "country_code": "BR",
+       "type": "education",
+       "lineage": [
+        "https://openalex.org/I88273585"
+       ]
+      }
+     ],
+     "countries": [
+      "BR"
+     ],
+     "is_corresponding": false,
+     "raw_author_name": "Francisco A.H. Fonseca",
+     "raw_affiliation_strings": [
+      "Universidade Federal de S\u00e3o Paulo, S\u00e3o Paulo"
+     ],
+     "raw_orcid": null,
+     "affiliations": [
+      {
+       "raw_affiliation_string": "Universidade Federal de S\u00e3o Paulo, S\u00e3o Paulo",
+       "institution_ids": [
+        "https://openalex.org/I88273585"
+       ]
+      }
+     ]
+    },
+    {
+     "author_position": "middle",
+     "author": {
+      "id": "https://openalex.org/A5022102417",
+      "display_name": "Jacques Genest",
+      "orcid": "https://orcid.org/0000-0003-2248-9663"
+     },
+     "institutions": [
+      {
+       "id": "https://openalex.org/I2801766832",
+       "display_name": "McGill University Health Centre",
+       "ror": "https://ror.org/04cpxjv19",
+       "country_code": "CA",
+       "type": "healthcare",
+       "lineage": [
+        "https://openalex.org/I2801766832"
+       ]
+      }
+     ],
+     "countries": [
+      "CA"
+     ],
+     "is_corresponding": false,
+     "raw_author_name": "Jacques Genest",
+     "raw_affiliation_strings": [
+      "McGill University Health Center, Montreal"
+     ],
+     "raw_orcid": null,
+     "affiliations": [
+      {
+       "raw_affiliation_string": "McGill University Health Center, Montreal",
+       "institution_ids": [
+        "https://openalex.org/I2801766832"
+       ]
+      }
+     ]
+    },
+    {
+     "author_position": "middle",
+     "author": {
+      "id": "https://openalex.org/A5068202304",
+      "display_name": "Antonio M. Gotto",
+      "orcid": "https://orcid.org/0000-0001-8076-6783"
+     },
+     "institutions": [],
+     "countries": [],
+     "is_corresponding": false,
+     "raw_author_name": "Antonio M. Gotto",
+     "raw_affiliation_strings": [
+      "United States"
+     ],
+     "raw_orcid": null,
+     "affiliations": [
+      {
+       "raw_affiliation_string": "United States",
+       "institution_ids": []
+      }
+     ]
+    },
+    {
+     "author_position": "middle",
+     "author": {
+      "id": "https://openalex.org/A5077848934",
+      "display_name": "John J.P. Kastelein",
+      "orcid": "https://orcid.org/0000-0003-2018-4532"
+     },
+     "institutions": [
+      {
+       "id": "https://openalex.org/I2802928900",
+       "display_name": "Amsterdam UMC Location University of Amsterdam",
+       "ror": "https://ror.org/03t4gr691",
+       "country_code": "NL",
+       "type": "healthcare",
+       "lineage": [
+        "https://openalex.org/I2802928900",
+        "https://openalex.org/I4210151833"
+       ]
+      },
+      {
+       "id": "https://openalex.org/I887064364",
+       "display_name": "University of Amsterdam",
+       "ror": "https://ror.org/04dkp9463",
+       "country_code": "NL",
+       "type": "education",
+       "lineage": [
+        "https://openalex.org/I887064364"
+       ]
+      }
+     ],
+     "countries": [
+      "NL"
+     ],
+     "is_corresponding": false,
+     "raw_author_name": "John J.P. Kastelein",
+     "raw_affiliation_strings": [
+      "Department of Vascular Medicine, Academic Medical Center, University of Amsterdam, Amsterdam"
+     ],
+     "raw_orcid": null,
+     "affiliations": [
+      {
+       "raw_affiliation_string": "Department of Vascular Medicine, Academic Medical Center, University of Amsterdam, Amsterdam",
+       "institution_ids": [
+        "https://openalex.org/I2802928900",
+        "https://openalex.org/I887064364"
+       ]
+      }
+     ]
+    },
+    {
+     "author_position": "middle",
+     "author": {
+      "id": "https://openalex.org/A5028480812",
+      "display_name": "Wolfgang K\u00f6enig",
+      "orcid": "https://orcid.org/0000-0002-2064-9603"
+     },
+     "institutions": [
+      {
+       "id": "https://openalex.org/I196349391",
+       "display_name": "Universit\u00e4t Ulm",
+       "ror": "https://ror.org/032000t02",
+       "country_code": "DE",
+       "type": "education",
+       "lineage": [
+        "https://openalex.org/I196349391"
+       ]
+      }
+     ],
+     "countries": [
+      "DE"
+     ],
+     "is_corresponding": false,
+     "raw_author_name": "Wolfgang Koenig",
+     "raw_affiliation_strings": [
+      "University of Ulm Medical Center, Ulm, Germany"
+     ],
+     "raw_orcid": null,
+     "affiliations": [
+      {
+       "raw_affiliation_string": "University of Ulm Medical Center, Ulm, Germany",
+       "institution_ids": [
+        "https://openalex.org/I196349391"
+       ]
+      }
+     ]
+    },
+    {
+     "author_position": "middle",
+     "author": {
+      "id": "https://openalex.org/A5043201732",
+      "display_name": "Peter Libby",
+      "orcid": "https://orcid.org/0000-0002-1502-502X"
+     },
+     "institutions": [
+      {
+       "id": "https://openalex.org/I1283280774",
+       "display_name": "Brigham and Women's Hospital",
+       "ror": "https://ror.org/04b6nzv94",
+       "country_code": "US",
+       "type": "healthcare",
+       "lineage": [
+        "https://openalex.org/I1283280774",
+        "https://openalex.org/I48633490"
+       ]
+      },
+      {
+       "id": "https://openalex.org/I136199984",
+       "display_name": "Harvard University",
+       "ror": "https://ror.org/03vek6s52",
+       "country_code": "US",
+       "type": "education",
+       "lineage": [
+        "https://openalex.org/I136199984"
+       ]
+      }
+     ],
+     "countries": [
+      "US"
+     ],
+     "is_corresponding": false,
+     "raw_author_name": "Peter Libby",
+     "raw_affiliation_strings": [
+      "Division of Cardiovascular Medicine, Brigham and Women's Hospital, Harvard Medical School, Boston"
+     ],
+     "raw_orcid": null,
+     "affiliations": [
+      {
+       "raw_affiliation_string": "Division of Cardiovascular Medicine, Brigham and Women's Hospital, Harvard Medical School, Boston",
+       "institution_ids": [
+        "https://openalex.org/I1283280774",
+        "https://openalex.org/I136199984"
+       ]
+      }
+     ]
+    },
+    {
+     "author_position": "middle",
+     "author": {
+      "id": "https://openalex.org/A5063852420",
+      "display_name": "Alberto Lorenzatti",
+      "orcid": "https://orcid.org/0000-0003-4180-2010"
+     },
+     "institutions": [
+      {
+       "id": "https://openalex.org/I4210139782",
+       "display_name": "Servicio Diabetolog\u00eda Hospital C\u00f3rdoba",
+       "ror": "https://ror.org/04mnty788",
+       "country_code": "AR",
+       "type": "healthcare",
+       "lineage": [
+        "https://openalex.org/I4210139782"
+       ]
+      }
+     ],
+     "countries": [
+      "AR"
+     ],
+     "is_corresponding": false,
+     "raw_author_name": "Alberto J. Lorenzatti",
+     "raw_affiliation_strings": [
+      "Hospital Cordoba, Cordoba, Argentina"
+     ],
+     "raw_orcid": null,
+     "affiliations": [
+      {
+       "raw_affiliation_string": "Hospital Cordoba, Cordoba, Argentina",
+       "institution_ids": [
+        "https://openalex.org/I4210139782"
+       ]
+      }
+     ]
+    },
+    {
+     "author_position": "middle",
+     "author": {
+      "id": "https://openalex.org/A5041415060",
+      "display_name": "Jean MacFadyen",
+      "orcid": null
+     },
+     "institutions": [
+      {
+       "id": "https://openalex.org/I1283280774",
+       "display_name": "Brigham and Women's Hospital",
+       "ror": "https://ror.org/04b6nzv94",
+       "country_code": "US",
+       "type": "healthcare",
+       "lineage": [
+        "https://openalex.org/I1283280774",
+        "https://openalex.org/I48633490"
+       ]
+      },
+      {
+       "id": "https://openalex.org/I136199984",
+       "display_name": "Harvard University",
+       "ror": "https://ror.org/03vek6s52",
+       "country_code": "US",
+       "type": "education",
+       "lineage": [
+        "https://openalex.org/I136199984"
+       ]
+      }
+     ],
+     "countries": [
+      "US"
+     ],
+     "is_corresponding": false,
+     "raw_author_name": "Jean G. MacFadyen",
+     "raw_affiliation_strings": [
+      "Center for Cardiovascular Disease Prevention, Brigham and Women's Hospital, Harvard Medical School, Boston"
+     ],
+     "raw_orcid": null,
+     "affiliations": [
+      {
+       "raw_affiliation_string": "Center for Cardiovascular Disease Prevention, Brigham and Women's Hospital, Harvard Medical School, Boston",
+       "institution_ids": [
+        "https://openalex.org/I1283280774",
+        "https://openalex.org/I136199984"
+       ]
+      }
+     ]
+    },
+    {
+     "author_position": "middle",
+     "author": {
+      "id": "https://openalex.org/A5079728437",
+      "display_name": "B\u00f8rge G. Nordestgaard",
+      "orcid": "https://orcid.org/0000-0002-1954-7220"
+     },
+     "institutions": [
+      {
+       "id": "https://openalex.org/I2801827564",
+       "display_name": "Herlev Hospital",
+       "ror": "https://ror.org/00wys9y90",
+       "country_code": "DK",
+       "type": "healthcare",
+       "lineage": [
+        "https://openalex.org/I2801827564"
+       ]
+      },
+      {
+       "id": "https://openalex.org/I2802567020",
+       "display_name": "Copenhagen University Hospital",
+       "ror": "https://ror.org/05bpbnx46",
+       "country_code": "DK",
+       "type": "healthcare",
+       "lineage": [
+        "https://openalex.org/I2802567020"
+       ]
+      }
+     ],
+     "countries": [
+      "DK"
+     ],
+     "is_corresponding": false,
+     "raw_author_name": "B\u00f8rge G. Nordestgaard",
+     "raw_affiliation_strings": [
+      "Herlev Hospital, Copenhagen University Hospital, Herlev, Denmark"
+     ],
+     "raw_orcid": null,
+     "affiliations": [
+      {
+       "raw_affiliation_string": "Herlev Hospital, Copenhagen University Hospital, Herlev, Denmark",
+       "institution_ids": [
+        "https://openalex.org/I2801827564",
+        "https://openalex.org/I2802567020"
+       ]
+      }
+     ]
+    },
+    {
+     "author_position": "middle",
+     "author": {
+      "id": "https://openalex.org/A5106691980",
+      "display_name": "James Shepherd",
+      "orcid": null
+     },
+     "institutions": [
+      {
+       "id": "https://openalex.org/I7882870",
+       "display_name": "University of Glasgow",
+       "ror": "https://ror.org/00vtgdb53",
+       "country_code": "GB",
+       "type": "education",
+       "lineage": [
+        "https://openalex.org/I7882870"
+       ]
+      }
+     ],
+     "countries": [
+      "GB"
+     ],
+     "is_corresponding": false,
+     "raw_author_name": "James Shepherd",
+     "raw_affiliation_strings": [
+      "University of Glasgow, Glasgow, Scotland"
+     ],
+     "raw_orcid": null,
+     "affiliations": [
+      {
+       "raw_affiliation_string": "University of Glasgow, Glasgow, Scotland",
+       "institution_ids": [
+        "https://openalex.org/I7882870"
+       ]
+      }
+     ]
+    },
+    {
+     "author_position": "middle",
+     "author": {
+      "id": "https://openalex.org/A5108410707",
+      "display_name": "James T. Willerson",
+      "orcid": null
+     },
+     "institutions": [
+      {
+       "id": "https://openalex.org/I1333109800",
+       "display_name": "St. Luke's Episcopal Hospital",
+       "ror": "https://ror.org/0195twz09",
+       "country_code": "US",
+       "type": "healthcare",
+       "lineage": [
+        "https://openalex.org/I1333109800"
+       ]
+      }
+     ],
+     "countries": [
+      "US"
+     ],
+     "is_corresponding": false,
+     "raw_author_name": "James T. Willerson",
+     "raw_affiliation_strings": [
+      "St. Luke's Episcopal Hospital\u2013Texas Heart Institute, Houston"
+     ],
+     "raw_orcid": null,
+     "affiliations": [
+      {
+       "raw_affiliation_string": "St. Luke's Episcopal Hospital\u2013Texas Heart Institute, Houston",
+       "institution_ids": [
+        "https://openalex.org/I1333109800"
+       ]
+      }
+     ]
+    },
+    {
+     "author_position": "last",
+     "author": {
+      "id": "https://openalex.org/A5037322697",
+      "display_name": "Robert J. Glynn",
+      "orcid": "https://orcid.org/0000-0002-0697-8996"
+     },
+     "institutions": [
+      {
+       "id": "https://openalex.org/I1283280774",
+       "display_name": "Brigham and Women's Hospital",
+       "ror": "https://ror.org/04b6nzv94",
+       "country_code": "US",
+       "type": "healthcare",
+       "lineage": [
+        "https://openalex.org/I1283280774",
+        "https://openalex.org/I48633490"
+       ]
+      },
+      {
+       "id": "https://openalex.org/I136199984",
+       "display_name": "Harvard University",
+       "ror": "https://ror.org/03vek6s52",
+       "country_code": "US",
+       "type": "education",
+       "lineage": [
+        "https://openalex.org/I136199984"
+       ]
+      }
+     ],
+     "countries": [
+      "US"
+     ],
+     "is_corresponding": false,
+     "raw_author_name": "Robert J. Glynn",
+     "raw_affiliation_strings": [
+      "Center for Cardiovascular Disease Prevention, Brigham and Women's Hospital, Harvard Medical School, Boston"
+     ],
+     "raw_orcid": null,
+     "affiliations": [
+      {
+       "raw_affiliation_string": "Center for Cardiovascular Disease Prevention, Brigham and Women's Hospital, Harvard Medical School, Boston",
+       "institution_ids": [
+        "https://openalex.org/I1283280774",
+        "https://openalex.org/I136199984"
+       ]
+      }
+     ]
+    }
+   ],
+   "cited_by_count": 6716,
+   "ids": {
+    "openalex": "https://openalex.org/W2137983259",
+    "doi": "https://doi.org/10.1056/nejmoa0807646",
+    "mag": "2137983259",
+    "pmid": "https://pubmed.ncbi.nlm.nih.gov/18997196"
+   },
+   "abstract_inverted_index": {
+    "BACKGROUND:": [
+     0
+    ],
+    "Increased": [
+     1
+    ],
+    "levels": [
+     2,
+     16,
+     34,
+     58,
+     74,
+     134,
+     141
+    ],
+    "of": [
+     3,
+     17,
+     59,
+     75,
+     95,
+     101,
+     125,
+     146,
+     158,
+     183,
+     238,
+     301,
+     308,
+     326
+    ],
+    "the": [
+     4,
+     93,
+     96,
+     147,
+     161,
+     234,
+     324
+    ],
+    "inflammatory": [
+     5
+    ],
+    "biomarker": [
+     6
+    ],
+    "high-sensitivity": [
+     7,
+     18,
+     31,
+     71,
+     138,
+     317
+    ],
+    "C-reactive": [
+     8,
+     19,
+     32,
+     72,
+     139,
+     318
+    ],
+    "protein": [
+     9,
+     20,
+     33,
+     73,
+     140,
+     319
+    ],
+    "predict": [
+     10
+    ],
+    "cardiovascular": [
+     11,
+     114,
+     245,
+     328
+    ],
+    "events.": [
+     12,
+     329
+    ],
+    "Since": [
+     13
+    ],
+    "statins": [
+     14
+    ],
+    "lower": [
+     15
+    ],
+    "as": [
+     21,
+     23
+    ],
+    "well": [
+     22
+    ],
+    "cholesterol,": [
+     24
+    ],
+    "we": [
+     25
+    ],
+    "hypothesized": [
+     26
+    ],
+    "that": [
+     27
+    ],
+    "people": [
+     28
+    ],
+    "with": [
+     29,
+     53,
+     180,
+     315
+    ],
+    "elevated": [
+     30,
+     316
+    ],
+    "but": [
+     35,
+     295,
+     314
+    ],
+    "without": [
+     36,
+     312
+    ],
+    "hyperlipidemia": [
+     37,
+     313
+    ],
+    "might": [
+     38
+    ],
+    "benefit": [
+     39
+    ],
+    "from": [
+     40,
+     113,
+     244,
+     262
+    ],
+    "statin": [
+     41
+    ],
+    "treatment.": [
+     42
+    ],
+    "METHODS:": [
+     43
+    ],
+    "We": [
+     44
+    ],
+    "randomly": [
+     45
+    ],
+    "assigned": [
+     46
+    ],
+    "17,802": [
+     47
+    ],
+    "apparently": [
+     48,
+     309
+    ],
+    "healthy": [
+     49,
+     310
+    ],
+    "men": [
+     50
+    ],
+    "and": [
+     51,
+     70,
+     89,
+     137,
+     153,
+     163,
+     185,
+     200,
+     214,
+     231,
+     256,
+     258
+    ],
+    "women": [
+     52
+    ],
+    "low-density": [
+     54
+    ],
+    "lipoprotein": [
+     55
+    ],
+    "(LDL)": [
+     56
+    ],
+    "cholesterol": [
+     57,
+     133
+    ],
+    "less": [
+     60
+    ],
+    "than": [
+     61
+    ],
+    "130": [
+     62
+    ],
+    "mg": [
+     63,
+     77,
+     85
+    ],
+    "per": [
+     64,
+     68,
+     78,
+     155
+    ],
+    "deciliter": [
+     65
+    ],
+    "(3.4": [
+     66
+    ],
+    "mmol": [
+     67
+    ],
+    "liter)": [
+     69
+    ],
+    "2.0": [
+     76
+    ],
+    "liter": [
+     79
+    ],
+    "or": [
+     80,
+     87,
+     111,
+     218,
+     242,
+     293
+    ],
+    "higher": [
+     81,
+     299
+    ],
+    "to": [
+     82,
+     177,
+     196,
+     210,
+     227,
+     253,
+     271
+    ],
+    "rosuvastatin,": [
+     83,
+     170
+    ],
+    "20": [
+     84
+    ],
+    "daily,": [
+     86
+    ],
+    "placebo": [
+     88,
+     164
+    ],
+    "followed": [
+     90
+    ],
+    "them": [
+     91
+    ],
+    "for": [
+     92,
+     108,
+     169,
+     187,
+     202,
+     216,
+     233,
+     260
+    ],
+    "occurrence": [
+     94
+    ],
+    "combined": [
+     97,
+     235
+    ],
+    "primary": [
+     98,
+     148
+    ],
+    "end": [
+     99,
+     149,
+     236
+    ],
+    "point": [
+     100,
+     150,
+     237
+    ],
+    "myocardial": [
+     102,
+     188,
+     239
+    ],
+    "infarction,": [
+     103,
+     240
+    ],
+    "stroke,": [
+     104,
+     241
+    ],
+    "arterial": [
+     105
+    ],
+    "revascularization,": [
+     106
+    ],
+    "hospitalization": [
+     107
+    ],
+    "unstable": [
+     109,
+     219
+    ],
+    "angina,": [
+     110
+    ],
+    "death": [
+     112,
+     243,
+     261
+    ],
+    "causes.": [
+     115
+    ],
+    "RESULTS:": [
+     116
+    ],
+    "The": [
+     117,
+     144,
+     282
+    ],
+    "trial": [
+     118,
+     307
+    ],
+    "was": [
+     119
+    ],
+    "stopped": [
+     120
+    ],
+    "after": [
+     121
+    ],
+    "a": [
+     122,
+     288,
+     298
+    ],
+    "median": [
+     123
+    ],
+    "follow-up": [
+     124,
+     159
+    ],
+    "1.9": [
+     126
+    ],
+    "years": [
+     127
+    ],
+    "(maximum,": [
+     128
+    ],
+    "5.0).": [
+     129
+    ],
+    "Rosuvastatin": [
+     130
+    ],
+    "reduced": [
+     131,
+     323
+    ],
+    "LDL": [
+     132
+    ],
+    "by": [
+     135,
+     142
+    ],
+    "50%": [
+     136
+    ],
+    "37%.": [
+     143
+    ],
+    "rates": [
+     145,
+     182
+    ],
+    "were": [
+     151,
+     276
+    ],
+    "0.77": [
+     152,
+     215
+    ],
+    "1.36": [
+     154
+    ],
+    "100": [
+     156
+    ],
+    "person-years": [
+     157
+    ],
+    "in": [
+     160,
+     278,
+     291
+    ],
+    "rosuvastatin": [
+     162,
+     283,
+     321
+    ],
+    "groups,": [
+     165
+    ],
+    "respectively": [
+     166
+    ],
+    "(hazard": [
+     167,
+     190,
+     204,
+     221,
+     247,
+     265
+    ],
+    "ratio": [
+     168
+    ],
+    "0.56;": [
+     171
+    ],
+    "95%": [
+     172,
+     193,
+     207,
+     224,
+     250,
+     268
+    ],
+    "confidence": [
+     173
+    ],
+    "interval": [
+     174
+    ],
+    "[CI],": [
+     175
+    ],
+    "0.46": [
+     176
+    ],
+    "0.69;": [
+     178,
+     254
+    ],
+    "P<0.00001),": [
+     179,
+     229,
+     255
+    ],
+    "corresponding": [
+     181
+    ],
+    "0.17": [
+     184
+    ],
+    "0.37": [
+     186
+    ],
+    "infarction": [
+     189
+    ],
+    "ratio,": [
+     191,
+     205,
+     222,
+     248,
+     266
+    ],
+    "0.46;": [
+     192
+    ],
+    "CI,": [
+     194,
+     208,
+     225,
+     251,
+     269
+    ],
+    "0.30": [
+     195
+    ],
+    "0.70;": [
+     197,
+     228
+    ],
+    "P=0.0002),": [
+     198
+    ],
+    "0.18": [
+     199
+    ],
+    "0.34": [
+     201,
+     209
+    ],
+    "stroke": [
+     203
+    ],
+    "0.52;": [
+     206
+    ],
+    "0.79;": [
+     211
+    ],
+    "P=0.002),": [
+     212
+    ],
+    "0.41": [
+     213
+    ],
+    "revascularization": [
+     217
+    ],
+    "angina": [
+     220
+    ],
+    "0.53;": [
+     223,
+     249
+    ],
+    "0.40": [
+     226,
+     252
+    ],
+    "0.45": [
+     230
+    ],
+    "0.85": [
+     232
+    ],
+    "causes": [
+     246
+    ],
+    "1.00": [
+     257
+    ],
+    "1.25": [
+     259
+    ],
+    "any": [
+     263
+    ],
+    "cause": [
+     264
+    ],
+    "0.80;": [
+     267
+    ],
+    "0.67": [
+     270
+    ],
+    "0.97;": [
+     272
+    ],
+    "P=0.02).": [
+     273
+    ],
+    "Consistent": [
+     274
+    ],
+    "effects": [
+     275
+    ],
+    "observed": [
+     277
+    ],
+    "all": [
+     279
+    ],
+    "subgroups": [
+     280
+    ],
+    "evaluated.": [
+     281
+    ],
+    "group": [
+     284
+    ],
+    "did": [
+     285,
+     296
+    ],
+    "not": [
+     286
+    ],
+    "have": [
+     287,
+     297
+    ],
+    "significant": [
+     289
+    ],
+    "increase": [
+     290
+    ],
+    "myopathy": [
+     292
+    ],
+    "cancer": [
+     294
+    ],
+    "incidence": [
+     300,
+     325
+    ],
+    "physician-reported": [
+     302
+    ],
+    "diabetes.": [
+     303
+    ],
+    "CONCLUSIONS:": [
+     304
+    ],
+    "In": [
+     305
+    ],
+    "this": [
+     306
+    ],
+    "persons": [
+     311
+    ],
+    "levels,": [
+     320
+    ],
+    "significantly": [
+     322
+    ],
+    "major": [
+     327
+    ],
+    "(ClinicalTrials.gov": [
+     330
+    ],
+    "number,": [
+     331
+    ],
+    "NCT00239681.)": [
+     332
+    ]
+   },
+   "language": "en",
+   "type": "article"
+  },
+  {
+   "id": "https://openalex.org/W4409883331",
+   "doi": "https://doi.org/10.1109/comp-sif65618.2025.10969885",
+   "title": "Women Safety Alert System Using IoT with Fingerprint Authentication and Real-Time Alerts",
+   "display_name": "Women Safety Alert System Using IoT with Fingerprint Authentication and Real-Time Alerts",
+   "publication_year": 2025,
+   "primary_location": {
+    "id": "doi:10.1109/comp-sif65618.2025.10969885",
+    "is_oa": false,
+    "landing_page_url": "https://doi.org/10.1109/comp-sif65618.2025.10969885",
+    "pdf_url": null,
+    "source": null,
+    "license": null,
+    "license_id": null,
+    "version": "publishedVersion",
+    "is_accepted": true,
+    "is_published": true,
+    "raw_source_name": "2025 International Conference on Computing for Sustainability and Intelligent Future (COMP-SIF)",
+    "raw_type": "proceedings-article"
+   },
+   "best_oa_location": null,
+   "authorships": [
+    {
+     "author_position": "first",
+     "author": {
+      "id": "https://openalex.org/A5103593145",
+      "display_name": "Shreya Patil",
+      "orcid": null
+     },
+     "institutions": [],
+     "countries": [],
+     "is_corresponding": false,
+     "raw_author_name": "Shreya Patil",
+     "raw_affiliation_strings": [
+      "BMS Institute of Technology and Management,Dept. of CSE,Bengaluru,India"
+     ],
+     "raw_orcid": null,
+     "affiliations": [
+      {
+       "raw_affiliation_string": "BMS Institute of Technology and Management,Dept. of CSE,Bengaluru,India",
+       "institution_ids": []
+      }
+     ]
+    },
+    {
+     "author_position": "middle",
+     "author": {
+      "id": "https://openalex.org/A5100687523",
+      "display_name": "R. Shankar",
+      "orcid": "https://orcid.org/0000-0003-1863-3685"
+     },
+     "institutions": [],
+     "countries": [],
+     "is_corresponding": false,
+     "raw_author_name": "Shankar R",
+     "raw_affiliation_strings": [
+      "BMS Institute of Technology and Management,Dept. of CSE,Bengaluru,India"
+     ],
+     "raw_orcid": null,
+     "affiliations": [
+      {
+       "raw_affiliation_string": "BMS Institute of Technology and Management,Dept. of CSE,Bengaluru,India",
+       "institution_ids": []
+      }
+     ]
+    },
+    {
+     "author_position": "middle",
+     "author": {
+      "id": "https://openalex.org/A5117359535",
+      "display_name": "B S Srividya",
+      "orcid": null
+     },
+     "institutions": [],
+     "countries": [],
+     "is_corresponding": false,
+     "raw_author_name": "B S Srividya",
+     "raw_affiliation_strings": [
+      "BMS Institute of Technology and Management,Dept. of CSE,Bengaluru,India"
+     ],
+     "raw_orcid": null,
+     "affiliations": [
+      {
+       "raw_affiliation_string": "BMS Institute of Technology and Management,Dept. of CSE,Bengaluru,India",
+       "institution_ids": []
+      }
+     ]
+    },
+    {
+     "author_position": "middle",
+     "author": {
+      "id": "https://openalex.org/A5117359536",
+      "display_name": "Lassika Agarwal",
+      "orcid": null
+     },
+     "institutions": [],
+     "countries": [],
+     "is_corresponding": false,
+     "raw_author_name": "Lassika Agarwal",
+     "raw_affiliation_strings": [
+      "BMS Institute of Technology and Management,Dept. of CSE,Bengaluru,India"
+     ],
+     "raw_orcid": null,
+     "affiliations": [
+      {
+       "raw_affiliation_string": "BMS Institute of Technology and Management,Dept. of CSE,Bengaluru,India",
+       "institution_ids": []
+      }
+     ]
+    },
+    {
+     "author_position": "last",
+     "author": {
+      "id": "https://openalex.org/A5117359537",
+      "display_name": "J Rheya",
+      "orcid": null
+     },
+     "institutions": [],
+     "countries": [],
+     "is_corresponding": false,
+     "raw_author_name": "Rheya J",
+     "raw_affiliation_strings": [
+      "BMS Institute of Technology and Management,Dept. of CSE,Bengaluru,India"
+     ],
+     "raw_orcid": null,
+     "affiliations": [
+      {
+       "raw_affiliation_string": "BMS Institute of Technology and Management,Dept. of CSE,Bengaluru,India",
+       "institution_ids": []
+      }
+     ]
+    }
+   ],
+   "cited_by_count": 5,
+   "ids": {
+    "openalex": "https://openalex.org/W4409883331",
+    "doi": "https://doi.org/10.1109/comp-sif65618.2025.10969885"
+   },
+   "abstract_inverted_index": {
+    "The": [
+     0,
+     37,
+     63
+    ],
+    "primary": [
+     1
+    ],
+    "goal": [
+     2
+    ],
+    "of": [
+     3,
+     17,
+     44,
+     117,
+     148,
+     160,
+     188,
+     202
+    ],
+    "this": [
+     4,
+     163,
+     192
+    ],
+    "paper": [
+     5
+    ],
+    "is": [
+     6,
+     39,
+     67,
+     86,
+     93,
+     136
+    ],
+    "to": [
+     7,
+     77,
+     95,
+     108,
+     131,
+     167,
+     190,
+     199,
+     209
+    ],
+    "develop": [
+     8
+    ],
+    "a": [
+     9,
+     71,
+     123,
+     127,
+     146,
+     169,
+     186,
+     213
+    ],
+    "Women's": [
+     10
+    ],
+    "Safety": [
+     11
+    ],
+    "Alert": [
+     12
+    ],
+    "System": [
+     13
+    ],
+    "based": [
+     14
+    ],
+    "on": [
+     15,
+     74
+    ],
+    "Internet": [
+     16
+    ],
+    "Things": [
+     18
+    ],
+    "(IoT)": [
+     19
+    ],
+    "which": [
+     20
+    ],
+    "addresses": [
+     21
+    ],
+    "safety": [
+     22,
+     149,
+     171,
+     176
+    ],
+    "issues": [
+     23
+    ],
+    "women": [
+     24,
+     217
+    ],
+    "encounter": [
+     25
+    ],
+    "in": [
+     26,
+     114,
+     138,
+     173,
+     197,
+     205,
+     207
+    ],
+    "their": [
+     27
+    ],
+    "daily": [
+     28
+    ],
+    "life": [
+     29
+    ],
+    "by": [
+     30,
+     70,
+     177
+    ],
+    "adopting": [
+     31
+    ],
+    "newer": [
+     32
+    ],
+    "and": [
+     33,
+     57,
+     111,
+     129,
+     142,
+     150,
+     182
+    ],
+    "more": [
+     34,
+     179
+    ],
+    "effective": [
+     35
+    ],
+    "technologies.": [
+     36
+    ],
+    "system": [
+     38,
+     85,
+     121,
+     135
+    ],
+    "developed": [
+     40
+    ],
+    "with": [
+     41,
+     100,
+     158
+    ],
+    "the": [
+     42,
+     75,
+     84,
+     96,
+     101,
+     115,
+     120,
+     134,
+     140,
+     203,
+     211
+    ],
+    "help": [
+     43
+    ],
+    "IoT": [
+     45
+    ],
+    "sensors": [
+     46
+    ],
+    "including": [
+     47
+    ],
+    "fingerprint": [
+     48,
+     64
+    ],
+    "module": [
+     49,
+     53,
+     59
+    ],
+    "for": [
+     50,
+     54,
+     60,
+     216
+    ],
+    "security,": [
+     51
+    ],
+    "GSM": [
+     52
+    ],
+    "transmitting": [
+     55
+    ],
+    "SMS": [
+     56,
+     91
+    ],
+    "GPS": [
+     58,
+     103
+    ],
+    "location": [
+     61
+    ],
+    "tracking.": [
+     62
+    ],
+    "authentication": [
+     65
+    ],
+    "feature": [
+     66
+    ],
+    "only": [
+     68
+    ],
+    "triggered": [
+     69
+    ],
+    "5-second": [
+     72
+    ],
+    "press": [
+     73
+    ],
+    "sensor": [
+     76
+    ],
+    "avoid": [
+     78
+    ],
+    "sending": [
+     79
+    ],
+    "fake": [
+     80
+    ],
+    "emergency": [
+     81,
+     90
+    ],
+    "alerts.": [
+     82
+    ],
+    "Once": [
+     83
+    ],
+    "turned": [
+     87
+    ],
+    "on,": [
+     88
+    ],
+    "an": [
+     89
+    ],
+    "alert": [
+     92
+    ],
+    "sent": [
+     94
+    ],
+    "specified": [
+     97
+    ],
+    "individuals": [
+     98
+    ],
+    "along": [
+     99,
+     157
+    ],
+    "user's": [
+     102
+    ],
+    "location,": [
+     104
+    ],
+    "thus": [
+     105
+    ],
+    "enabling": [
+     106
+    ],
+    "them": [
+     107
+    ],
+    "respond": [
+     109
+    ],
+    "promptly": [
+     110
+    ],
+    "immediately.": [
+     112
+    ],
+    "Even": [
+     113
+    ],
+    "absence": [
+     116
+    ],
+    "conventional": [
+     118
+    ],
+    "network,": [
+     119
+    ],
+    "provides": [
+     122
+    ],
+    "dependable": [
+     124
+    ],
+    "connection.": [
+     125
+    ],
+    "With": [
+     126
+    ],
+    "simple": [
+     128
+    ],
+    "easy": [
+     130
+    ],
+    "use": [
+     132
+    ],
+    "interface,": [
+     133
+    ],
+    "useful": [
+     137
+    ],
+    "both": [
+     139
+    ],
+    "urban": [
+     141
+    ],
+    "rural": [
+     143
+    ],
+    "areas": [
+     144,
+     196
+    ],
+    "imparting": [
+     145
+    ],
+    "sense": [
+     147
+    ],
+    "security": [
+     151
+    ],
+    "among": [
+     152
+    ],
+    "its": [
+     153
+    ],
+    "users.": [
+     154
+    ],
+    "In": [
+     155
+    ],
+    "addition,": [
+     156
+    ],
+    "incorporation": [
+     159
+    ],
+    "modern": [
+     161
+    ],
+    "technologies": [
+     162
+    ],
+    "solution": [
+     164
+    ],
+    "also": [
+     165
+    ],
+    "proves": [
+     166
+    ],
+    "be": [
+     168
+    ],
+    "practical": [
+     170
+    ],
+    "measure": [
+     172
+    ],
+    "ensuring": [
+     174
+    ],
+    "women's": [
+     175
+    ],
+    "being": [
+     178
+    ],
+    "adaptable,": [
+     180
+    ],
+    "flexible": [
+     181
+    ],
+    "scalable.": [
+     183
+    ],
+    "It": [
+     184
+    ],
+    "has": [
+     185
+    ],
+    "lot": [
+     187
+    ],
+    "potential": [
+     189
+    ],
+    "expand": [
+     191
+    ],
+    "work": [
+     193
+    ],
+    "across": [
+     194
+    ],
+    "other": [
+     195
+    ],
+    "order": [
+     198,
+     208
+    ],
+    "tackle": [
+     200
+    ],
+    "some": [
+     201
+    ],
+    "challenges": [
+     204
+    ],
+    "society": [
+     206
+    ],
+    "make": [
+     210
+    ],
+    "world": [
+     212
+    ],
+    "safer": [
+     214
+    ],
+    "place": [
+     215
+    ],
+    "[1].": [
+     218
+    ]
+   },
+   "language": "en",
+   "type": "conference-paper"
+  },
+  {
+   "id": "https://openalex.org/W2515557171",
+   "doi": "https://doi.org/10.15623/ijret.2015.0417013",
+   "title": "SELF DEFENSE SYSTEM FOR WOMEN SAFETY WITH LOCATION TRACKING AND SMS ALERTING THROUGH GSM NETWORK",
+   "display_name": "SELF DEFENSE SYSTEM FOR WOMEN SAFETY WITH LOCATION TRACKING AND SMS ALERTING THROUGH GSM NETWORK",
+   "publication_year": 2015,
+   "primary_location": {
+    "id": "doi:10.15623/ijret.2015.0417013",
+    "is_oa": true,
+    "landing_page_url": "https://doi.org/10.15623/ijret.2015.0417013",
+    "pdf_url": "https://doi.org/10.15623/ijret.2015.0417013",
+    "source": {
+     "id": "https://openalex.org/S4210210127",
+     "display_name": "International Journal of Research in Engineering and Technology",
+     "issn_l": "2319-1163",
+     "issn": [
+      "2319-1163",
+      "2321-7308"
+     ],
+     "is_oa": false,
+     "is_in_doaj": false,
+     "is_core": true,
+     "host_organization": null,
+     "host_organization_name": null,
+     "host_organization_lineage": [],
+     "host_organization_lineage_names": [],
+     "type": "journal"
+    },
+    "license": null,
+    "license_id": null,
+    "version": "publishedVersion",
+    "is_accepted": true,
+    "is_published": true,
+    "raw_source_name": "International Journal of Research in Engineering and Technology",
+    "raw_type": "journal-article"
+   },
+   "best_oa_location": {
+    "id": "doi:10.15623/ijret.2015.0417013",
+    "is_oa": true,
+    "landing_page_url": "https://doi.org/10.15623/ijret.2015.0417013",
+    "pdf_url": "https://doi.org/10.15623/ijret.2015.0417013",
+    "source": {
+     "id": "https://openalex.org/S4210210127",
+     "display_name": "International Journal of Research in Engineering and Technology",
+     "issn_l": "2319-1163",
+     "issn": [
+      "2319-1163",
+      "2321-7308"
+     ],
+     "is_oa": false,
+     "is_in_doaj": false,
+     "is_core": true,
+     "host_organization": null,
+     "host_organization_name": null,
+     "host_organization_lineage": [],
+     "host_organization_lineage_names": [],
+     "type": "journal"
+    },
+    "license": null,
+    "license_id": null,
+    "version": "publishedVersion",
+    "is_accepted": true,
+    "is_published": true,
+    "raw_source_name": "International Journal of Research in Engineering and Technology",
+    "raw_type": "journal-article"
+   },
+   "authorships": [
+    {
+     "author_position": "first",
+     "author": {
+      "id": "https://openalex.org/A5004604595",
+      "display_name": "B.Vijaylashmi",
+      "orcid": null
+     },
+     "institutions": [],
+     "countries": [],
+     "is_corresponding": true,
+     "raw_author_name": "B.Vijaylashmi .",
+     "raw_affiliation_strings": [
+      "Research Scholar, E&CE Department, VNEC, Shorapur -585 220, Karnataka -India"
+     ],
+     "raw_orcid": null,
+     "affiliations": [
+      {
+       "raw_affiliation_string": "Research Scholar, E&CE Department, VNEC, Shorapur -585 220, Karnataka -India",
+       "institution_ids": []
+      }
+     ]
+    }
+   ],
+   "cited_by_count": 41,
+   "ids": {
+    "openalex": "https://openalex.org/W2515557171",
+    "doi": "https://doi.org/10.15623/ijret.2015.0417013",
+    "mag": "2515557171"
+   },
+   "abstract_inverted_index": {
+    "The": [
+     0
+    ],
+    "world": [
+     1
+    ],
+    "is": [
+     2,
+     20,
+     22,
+     56,
+     70,
+     79,
+     95,
+     153,
+     195,
+     204,
+     230,
+     244,
+     279
+    ],
+    "becoming": [
+     3
+    ],
+    "so": [
+     4,
+     292,
+     319
+    ],
+    "much": [
+     5
+    ],
+    "more": [
+     6
+    ],
+    "unsafe": [
+     7
+    ],
+    "for": [
+     8,
+     54,
+     120,
+     125,
+     135,
+     150,
+     158,
+     257,
+     263
+    ],
+    "women.Social": [
+     9
+    ],
+    "evils": [
+     10
+    ],
+    "like": [
+     11,
+     154
+    ],
+    "molestations,": [
+     12
+    ],
+    "dowry,": [
+     13
+    ],
+    "crime": [
+     14,
+     30,
+     359
+    ],
+    "against": [
+     15,
+     31,
+     360
+    ],
+    "women,": [
+     16
+    ],
+    "worst": [
+     17
+    ],
+    "among": [
+     18
+    ],
+    "all": [
+     19
+    ],
+    "rape": [
+     21
+    ],
+    "on": [
+     23,
+     144,
+     206,
+     245,
+     276
+    ],
+    "the": [
+     24,
+     62,
+     107,
+     139,
+     161,
+     207,
+     213,
+     217,
+     220,
+     224,
+     268,
+     273,
+     277,
+     282,
+     286,
+     290,
+     294,
+     300,
+     305,
+     310,
+     314,
+     325,
+     329,
+     377
+    ],
+    "rise": [
+     25
+    ],
+    "in": [
+     26,
+     40,
+     87,
+     131,
+     184,
+     350,
+     372
+    ],
+    "many": [
+     27
+    ],
+    "countries.Incidents": [
+     28
+    ],
+    "of": [
+     29,
+     64,
+     75,
+     141,
+     186,
+     251,
+     267,
+     285,
+     313,
+     328,
+     352
+    ],
+    "women": [
+     32,
+     55,
+     67,
+     126,
+     151,
+     165,
+     175,
+     214
+    ],
+    "have": [
+     33
+    ],
+    "been": [
+     34
+    ],
+    "increasing": [
+     35,
+     71
+    ],
+    "at": [
+     36
+    ],
+    "an": [
+     37,
+     121
+    ],
+    "alarming": [
+     38
+    ],
+    "pace": [
+     39
+    ],
+    "Indian": [
+     41
+    ],
+    "cities,": [
+     42
+    ],
+    "most": [
+     43
+    ],
+    "common": [
+     44
+    ],
+    "incidents": [
+     45
+    ],
+    "being": [
+     46
+    ],
+    "rape,": [
+     47
+    ],
+    "kidnapping,": [
+     48
+    ],
+    "sexual": [
+     49
+    ],
+    "harassment": [
+     50,
+     188
+    ],
+    "and": [
+     51,
+     68,
+     91,
+     104,
+     123,
+     227,
+     254,
+     299,
+     354
+    ],
+    "eve": [
+     52
+    ],
+    "teasing..Security": [
+     53
+    ],
+    "still": [
+     57
+    ],
+    "a": [
+     58,
+     96,
+     114,
+     129,
+     142,
+     155,
+     172,
+     180,
+     201,
+     236,
+     322,
+     333,
+     345,
+     364
+    ],
+    "major": [
+     59
+    ],
+    "issue": [
+     60
+    ],
+    "as": [
+     61,
+     179,
+     232,
+     270,
+     272
+    ],
+    "number": [
+     63,
+     327
+    ],
+    "crimes": [
+     65
+    ],
+    "over": [
+     66
+    ],
+    "girls": [
+     69
+    ],
+    "day-by-day.In": [
+     72
+    ],
+    "this": [
+     73,
+     145,
+     177,
+     258,
+     336
+    ],
+    "age": [
+     74
+    ],
+    "technology,": [
+     76
+    ],
+    "mobile": [
+     77
+    ],
+    "phone": [
+     78
+    ],
+    "one": [
+     80
+    ],
+    "gadget": [
+     81
+    ],
+    "almost": [
+     82
+    ],
+    "everyone": [
+     83
+    ],
+    "uses": [
+     84
+    ],
+    "to": [
+     85,
+     163,
+     197,
+     235,
+     289,
+     308,
+     324,
+     339,
+     367,
+     375
+    ],
+    "keep": [
+     86
+    ],
+    "touch": [
+     88
+    ],
+    "with": [
+     89,
+     138,
+     166,
+     223
+    ],
+    "family": [
+     90
+    ],
+    "friends..All": [
+     92
+    ],
+    "they": [
+     93
+    ],
+    "need": [
+     94
+    ],
+    "device": [
+     97,
+     178
+    ],
+    "that": [
+     98,
+     168,
+     193,
+     203,
+     293
+    ],
+    "can": [
+     99,
+     133,
+     317
+    ],
+    "be": [
+     100,
+     297
+    ],
+    "carried": [
+     101
+    ],
+    "around": [
+     102
+    ],
+    "easily": [
+     103
+    ],
+    "worn": [
+     105
+    ],
+    "whenever": [
+     106
+    ],
+    "woman": [
+     108,
+     130
+    ],
+    "feels": [
+     109
+    ],
+    "unsafe.This": [
+     110
+    ],
+    "proposal": [
+     111
+    ],
+    "document": [
+     112
+    ],
+    "describes": [
+     113
+    ],
+    "quick": [
+     115
+    ],
+    "responding,": [
+     116
+    ],
+    "cost": [
+     117
+    ],
+    "protection": [
+     118
+    ],
+    "system": [
+     119,
+     248,
+     261,
+     337
+    ],
+    "individual": [
+     122
+    ],
+    "especially": [
+     124
+    ],
+    "using": [
+     127
+    ],
+    "which": [
+     128,
+     331
+    ],
+    "distress": [
+     132
+    ],
+    "call": [
+     134
+    ],
+    "help": [
+     136,
+     164,
+     243,
+     357
+    ],
+    "just": [
+     137
+    ],
+    "press": [
+     140
+    ],
+    "button": [
+     143
+    ],
+    "smart": [
+     146
+    ],
+    "gadget.Self": [
+     147
+    ],
+    "Defense": [
+     148
+    ],
+    "System": [
+     149
+    ],
+    "safety": [
+     152
+    ],
+    "Smart": [
+     156
+    ],
+    "Watch": [
+     157
+    ],
+    "Women.It": [
+     159
+    ],
+    "has": [
+     160,
+     215
+    ],
+    "ability": [
+     162
+    ],
+    "technologies": [
+     167
+    ],
+    "are": [
+     169
+    ],
+    "embedded": [
+     170,
+     252
+    ],
+    "into": [
+     171
+    ],
+    "compact": [
+     173
+    ],
+    "device.The": [
+     174
+    ],
+    "wearing": [
+     176
+    ],
+    "watch": [
+     181,
+     208
+    ],
+    "or": [
+     182,
+     189,
+     209,
+     211
+    ],
+    "band,": [
+     183
+    ],
+    "case": [
+     185,
+     303
+    ],
+    "any": [
+     187
+    ],
+    "when": [
+     190,
+     212
+    ],
+    "she": [
+     191,
+     199
+    ],
+    "finds": [
+     192
+    ],
+    "someone": [
+     194
+    ],
+    "going": [
+     196
+    ],
+    "harass,": [
+     198
+    ],
+    "presses": [
+     200
+    ],
+    "switch": [
+     202
+    ],
+    "located": [
+     205
+    ],
+    "band": [
+     210
+    ],
+    "fallen": [
+     216
+    ],
+    "information": [
+     218,
+     229,
+     349
+    ],
+    "about": [
+     219
+    ],
+    "attack": [
+     221
+    ],
+    "along": [
+     222
+    ],
+    "body": [
+     225
+    ],
+    "posture": [
+     226
+    ],
+    "location": [
+     228,
+     266,
+     284,
+     312,
+     348
+    ],
+    "sent": [
+     231
+    ],
+    "SMS": [
+     233,
+     323,
+     346
+    ],
+    "alert": [
+     234
+    ],
+    "few": [
+     237
+    ],
+    "predefined": [
+     238
+    ],
+    "emergency": [
+     239,
+     373
+    ],
+    "numbers": [
+     240
+    ],
+    "And": [
+     241
+    ],
+    "soon": [
+     242,
+     271
+    ],
+    "its": [
+     246
+    ],
+    "way!The": [
+     247
+    ],
+    "will": [
+     249
+    ],
+    "consist": [
+     250
+    ],
+    "hardware": [
+     253
+    ],
+    "software": [
+     255
+    ],
+    "co-designed": [
+     256
+    ],
+    "dedicated": [
+     259
+    ],
+    "application.The": [
+     260
+    ],
+    "allows": [
+     262
+    ],
+    "knowing": [
+     264
+    ],
+    "exact": [
+     265
+    ],
+    "individual,": [
+     269
+    ],
+    "trigger": [
+     274
+    ],
+    "key": [
+     275
+    ],
+    "belt": [
+     278
+    ],
+    "pressed.By": [
+     280
+    ],
+    "providing": [
+     281
+    ],
+    "instant": [
+     283
+    ],
+    "distressed": [
+     287
+    ],
+    "victim": [
+     288
+    ],
+    "police": [
+     291
+    ],
+    "incident": [
+     295
+    ],
+    "could": [
+     296
+    ],
+    "prevented": [
+     298
+    ],
+    "culprit": [
+     301
+    ],
+    "apprehended.In": [
+     302
+    ],
+    "if": [
+     304
+    ],
+    "caretaker": [
+     306
+    ],
+    "wants": [
+     307
+    ],
+    "know": [
+     309
+    ],
+    "present": [
+     311
+    ],
+    "lady,": [
+     315
+    ],
+    "he/she": [
+     316
+    ],
+    "do": [
+     318
+    ],
+    "by": [
+     320,
+     342
+    ],
+    "sending": [
+     321,
+     343
+    ],
+    "SIM": [
+     326
+    ],
+    "lady": [
+     330
+    ],
+    "contains": [
+     332,
+     363
+    ],
+    "secret": [
+     334
+    ],
+    "password.Then": [
+     335
+    ],
+    "responds": [
+     338
+    ],
+    "such": [
+     340
+    ],
+    "request": [
+     341
+    ],
+    "back": [
+     344
+    ],
+    "containing": [
+     347
+    ],
+    "terms": [
+     351
+    ],
+    "Latitude": [
+     353
+    ],
+    "Longitude.This": [
+     355
+    ],
+    "would": [
+     356
+    ],
+    "reduce": [
+     358
+    ],
+    "women.It": [
+     361
+    ],
+    "also": [
+     362
+    ],
+    "shock": [
+     365,
+     371
+    ],
+    "mechanism": [
+     366
+    ],
+    "produce": [
+     368
+    ],
+    "non-lethal": [
+     369
+    ],
+    "electric": [
+     370
+    ],
+    "situations": [
+     374
+    ],
+    "deter": [
+     376
+    ],
+    "attacker.": [
+     378
+    ]
+   },
+   "language": "en",
+   "type": "article"
+  }
+ ],
+ "group_by": []
+}

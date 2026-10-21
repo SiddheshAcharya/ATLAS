@@ -1,0 +1,40 @@
+{
+ "human_labels": {
+  "1": "SUPPORTS",
+  "5": "SUPPORTS",
+  "10": "REPLICATES",
+  "16": "DIFF_SCOPE",
+  "19": "REPLICATES",
+  "24": "EXTENDS/SUPPORTS/REPLICATES",
+  "25": "DIFF_SCOPE",
+  "28": "EXTENDS/SUPPORTS/REPLICATES",
+  "30": "EXTENDS",
+  "31": "UNRELATED",
+  "33": "SUPPORTS/EXTENDS",
+  "34": "EXTENDS",
+  "39": "DIFF_SCOPE",
+  "43": "DIFF_SCOPE",
+  "48": "EXTENDS"
+ },
+ "results": {
+  "human_vs_ai": {
+   "strict_n": 12,
+   "strict_agree": 0.167,
+   "cohen_kappa": -0.165,
+   "lenient_agree_of_15": 2
+  },
+  "human_vs_model": {
+   "strict_n": 12,
+   "strict_agree": 0.167,
+   "cohen_kappa": -0.053,
+   "lenient_agree_of_15": 3
+  },
+  "ai_vs_model": {
+   "strict_n": 12,
+   "strict_agree": 0.417,
+   "cohen_kappa": 0.222,
+   "lenient_agree_of_15": 7
+  }
+ },
+ "note": "one human annotator (project team member), blind to AI and model labels; 3 of 15 rows given multiple labels (undecided)"
+}

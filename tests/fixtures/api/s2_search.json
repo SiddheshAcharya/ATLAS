@@ -1,0 +1,91 @@
+{
+ "total": 865,
+ "offset": 0,
+ "next": 20,
+ "data": [
+  {
+   "paperId": "cb657a941eb645528ee0c722307c149246bbbd4c",
+   "externalIds": {
+    "DOI": "10.5220/0013423600004646",
+    "CorpusId": 277619588
+   },
+   "title": "IoT Based Automatic Women\u2019s Safety Device for Enhanced Personal Security",
+   "venue": "Proceedings of the 1st International Conference on Cognitive &amp; Cloud Computing",
+   "year": 2024,
+   "citationCount": 2,
+   "openAccessPdf": {
+    "url": "https://doi.org/10.5220/0013423600004646",
+    "status": "GOLD",
+    "license": "CCBYNCND",
+    "disclaimer": "Notice: Paper or abstract available at https://api.unpaywall.org/v2/10.5220/0013423600004646?email=<INSERT_YOUR_EMAIL> or https://doi.org/10.5220/0013423600004646, which is subject to the license by the author or copyright owner provided with this content. Please go to the source to verify the license and copyright information for your use."
+   },
+   "authors": [
+    {
+     "authorId": "2354166319",
+     "name": "A. Kane"
+    },
+    {
+     "authorId": "2260044065",
+     "name": "Tabassum Maktum"
+    },
+    {
+     "authorId": "2333040447",
+     "name": "V. Mane"
+    },
+    {
+     "authorId": "52176514",
+     "name": "Namita D. Pulgam"
+    }
+   ],
+   "abstract": ": Women\u2019s security is a worldwide important concern in today\u2019s scenario which needs urgent attention of all the concerns of the society to provide enhanced safety to women. This paper presents development and deployment of automatically operated women safety device based on IoT technology with improved features meant for giving added layer of security and safety to women. In this paper IoT based device is developed with Raspberry pi technology. The automatic triggering of electric shock mechanism is provided using machine learning algorithm for detecting emergency condition based on of user\u2019s body parameters. It sends message and current location to the registered contact number."
+  },
+  {
+   "paperId": "240c6e19596ff73bded7f65bfa4db84904864f94",
+   "externalIds": {
+    "DOI": "10.22214/ijraset.2025.68890",
+    "CorpusId": 277900499
+   },
+   "title": "Smart Safety Bangle for Women an IoT Solution for Personal Protection",
+   "venue": "International Journal for Research in Applied Science and Engineering Technology",
+   "year": 2025,
+   "citationCount": 1,
+   "openAccessPdf": {
+    "url": "https://doi.org/10.22214/ijraset.2025.68890",
+    "status": "GOLD",
+    "license": null,
+    "disclaimer": "Notice: Paper or abstract available at https://api.unpaywall.org/v2/10.22214/ijraset.2025.68890?email=<INSERT_YOUR_EMAIL> or https://doi.org/10.22214/ijraset.2025.68890, which is subject to the license by the author or copyright owner provided with this content. Please go to the source to verify the license and copyright information for your use."
+   },
+   "authors": [
+    {
+     "authorId": "2469350454",
+     "name": "Mrs. S.V. Lakshmi Kumar"
+    }
+   ],
+   "abstract": "Abstract: Women, particularly young girls and mothers are more likely to face harassment and abuse in public places such as\nstreets, public transportation, and congested locations. To remedy this, we recommend a technologically advanced bangle with\nInternet of Things (IoT) characteristics to improve women's safety. The wearable device includes an emergency button and an\ninbuilt camera, allowing the wearer to take a snapshot of the abuser as well as geolocation information during an emergency.\nThe collected data is delivered directly to pre-defined emergency contacts on the user's smartphone, eliminating the need for\nadditional equipment. The smart bangle is simple to use, and the proactive safety feature provides real-time alerts and support in\ndangerous situations. The device, which combines IoT and wearable technologies, provides a valid and efficient technique of\nimproving personal protection for women in public settings."
+  },
+  {
+   "paperId": "ed1875f1af7cdad3aeb83fa0ce84e577654a0e4f",
+   "externalIds": {
+    "DOI": "10.55041/ijsrem46508",
+    "CorpusId": 278289686
+   },
+   "title": "An IoT-Based Smart Device for Real-Time Women Safety and Emergency Response",
+   "venue": "INTERNATIONAL JOURNAL OF SCIENTIFIC RESEARCH IN ENGINEERING AND MANAGEMENT",
+   "year": 2025,
+   "citationCount": 0,
+   "openAccessPdf": {
+    "url": "",
+    "status": null,
+    "license": null,
+    "disclaimer": "Notice: Paper or abstract available at https://api.unpaywall.org/v2/10.55041/ijsrem46508?email=<INSERT_YOUR_EMAIL> or https://doi.org/10.55041/ijsrem46508, which is subject to the license by the author or copyright owner provided with this content. Please go to the source to verify the license and copyright information for your use."
+   },
+   "authors": [
+    {
+     "authorId": "2310357895",
+     "name": "Sumanta Chatterjee"
+    }
+   ],
+   "abstract": "Abstract - With the increase in sexual violence and harassment complaints, personal safety, especially for women, has become a big issue in today\u2019s society. This Research Work outlines an IoT (Internet of Things) based Smart Device for Women Safety system that proactively prevents such cases and responds when they happen. The proposed system continuously monitors the user\u2019s safety by using several components such as NodeMCU ESP32, fingerprint sensor, GSM module (SIM 800L/A7670C) and GPS module (Neo-6M) which help send alerts in case there is any danger. When in danger the user(Women) gets to activate the machinery that needs her to prove she is the right owner once in every five minutes through a fingerprint detector. If the verification is not done by the user during that set period of time, then GPS module will automatically track her current location and through GSM already registered contacts along with the emergency services number provided by the government for immediate rescue by coops will receive an emergency message containing where she is located. Our Research Work\u2019s main aim is to create a portable, adaptable and low cost make-do gadget which would improve individual security as well as provide prompt help in critical situations. This is an approach to ensure we have the exact location of that person activated the device at all times so that, in case of emergencies no matter what happens she shouldn\u2019t get lost. The design of the gadget is such that it would be possible to place it inside your purse or even carry it around in your hand thereby promoting mobility among women. Thus generally speaking this work seeks forward towards designing a system for real-time monitoring of users based on their geographical position enabling them to avoid dangers preemptively and also seek assistance faster during emergencies anywhere anytime.\n\n\n\nKey Words: Women Safety, NodeMCU ESP32, Fingerprint Authentication, GSM Module (SIM 800L/A7670C), GPS Module (Neo-6M)."
+  }
+ ]
+}

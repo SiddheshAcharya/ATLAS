@@ -1,0 +1,246 @@
+@import "tailwindcss";
+@plugin "@tailwindcss/typography";
+@import "./theme-light.generated.css";
+
+/* Theme: dark by default; <html data-theme="light"> flips it. Classes are written dark-first
+   against two ATLAS palettes, so every page follows the theme with no per-component code:
+     ink-*     neutrals — 950 is the page, 900 a raised surface, 800/700 borders,
+               600..300 progressively stronger text, 100/50 headings.
+     accent-*  dark: refined gold · light: muted moss olive. Links, focus, active states.
+   The semantic palettes (red, emerald, amber, ...) keep their meaning and are mirrored for
+   light in theme-light.generated.css. `static` keeps every shade emitted, because the
+   custom CSS below and Cytoscape read them as plain variables. */
+@theme static {
+  --font-display: "Cormorant Garamond", "EB Garamond", "Libre Baskerville", "Times New Roman", Times, serif;
+
+  --color-ink-50: #f7f3ec;
+  --color-ink-100: #f2ede4;
+  --color-ink-200: #e4ded3;
+  --color-ink-300: #d0c9bd;
+  --color-ink-400: #ada699;
+  --color-ink-500: #8c867b;
+  --color-ink-600: #66615a;
+  --color-ink-700: #3a3733;
+  --color-ink-800: #262422;
+  --color-ink-900: #151515;
+  --color-ink-950: #0a0a0a;
+
+  --color-accent-50: #fbf6e9;
+  --color-accent-100: #f5e9c9;
+  --color-accent-200: #ebd7a2;
+  --color-accent-300: #dec27a;
+  --color-accent-400: #d3b062;
+  --color-accent-500: #c9a24b;
+  --color-accent-600: #a8873c;
+  --color-accent-700: #86692e;
+  --color-accent-800: #5e4a21;
+  --color-accent-900: #3a2e16;
+  --color-accent-950: #211a0d;
+}
+
+/* Light: warm beige paper, brown ink, moss-olive accent. Mirrored like the rest — 950 is
+   still "the page", 50 still "the strongest text". */
+:root[data-theme="light"] {
+  --color-ink-50: #2a1d13;
+  --color-ink-100: #3e2c1f;
+  --color-ink-200: #4a3628;
+  --color-ink-300: #584333;
+  --color-ink-400: #6b4f3a;
+  --color-ink-500: #7d6450;
+  --color-ink-600: #9a8371;
+  --color-ink-700: #c9b8a2;
+  --color-ink-800: #ddcfbb;
+  --color-ink-900: #ede3d3;
+  --color-ink-950: #f5efe6;
+
+  --color-accent-50: #22270f;
+  --color-accent-100: #2e3417;
+  --color-accent-200: #3a421f;
+  --color-accent-300: #465028;
+  --color-accent-400: #535e31;
+  --color-accent-500: #5f6b3a;
+  --color-accent-600: #8a9467;
+  --color-accent-700: #b4ba96;
+  --color-accent-800: #d2d5bc;
+  --color-accent-900: #e4e4d2;
+  --color-accent-950: #efeee2;
+}
+
+/* The few colours that live outside Tailwind classes — body, the Cytoscape graph — read
+   these variables instead of hard-coded hex. */
+:root {
+  color-scheme: dark;
+  --atlas-bg: var(--color-ink-950);
+  --atlas-fg: var(--color-ink-100);
+  --graph-label: var(--color-ink-200);
+  --graph-label-outline: var(--color-ink-950);
+  --graph-read-ring: var(--color-ink-50);
+  --graph-flash: var(--color-accent-400);
+  --graph-cites: var(--color-ink-600);
+  --graph-png-bg: var(--color-ink-950);
+}
+
+:root[data-theme="light"] {
+  color-scheme: light;
+  --graph-flash: #a8873c;
+  --graph-cites: var(--color-ink-700);
+}
+
+@layer base {
+  body {
+    background: var(--atlas-bg);
+    color: var(--atlas-fg);
+    -webkit-font-smoothing: antialiased;
+  }
+
+  /* Page titles are set in the display serif; larger section headings opt in with
+     `font-display`. Small uppercase labels stay sans — Cormorant thins out below ~16px. */
+  h1 {
+    font-family: var(--font-display);
+    letter-spacing: 0.01em;
+  }
+
+  /* Visible keyboard focus everywhere (projector + accessibility). In the base layer so a
+     component with its own focus style (the home search box's ring) can replace it. */
+  :focus-visible {
+    outline: 2px solid var(--color-accent-500);
+    outline-offset: 2px;
+  }
+
+  ::selection {
+    background: color-mix(in srgb, var(--color-accent-500) 35%, transparent);
+  }
+}
+
+/* Cytoscape needs an explicit-height container; Tailwind's h-full chain needs this too. */
+html, body, #root {
+  height: 100%;
+}
+
+
+/* Theme change: lib/theme.ts adds this class for one transition, so colours cross-fade
+   instead of snapping — without slowing every hover in the app the rest of the time. */
+html.theme-transition,
+html.theme-transition *,
+html.theme-transition *::before,
+html.theme-transition *::after {
+  transition:
+    background-color 300ms ease,
+    border-color 300ms ease,
+    color 300ms ease,
+    fill 300ms ease,
+    stroke 300ms ease !important;
+}
+
+/* Report prose follows the theme through the palette variables (no prose-invert switch). */
+.prose {
+  --tw-prose-body: var(--color-ink-300);
+  --tw-prose-headings: var(--color-ink-100);
+  --tw-prose-lead: var(--color-ink-400);
+  --tw-prose-links: var(--color-accent-300);
+  --tw-prose-bold: var(--color-ink-100);
+  --tw-prose-counters: var(--color-ink-500);
+  --tw-prose-bullets: var(--color-ink-600);
+  --tw-prose-hr: var(--color-ink-800);
+  --tw-prose-quotes: var(--color-ink-200);
+  --tw-prose-quote-borders: var(--color-accent-600);
+  --tw-prose-captions: var(--color-ink-500);
+  --tw-prose-kbd: var(--color-ink-100);
+  --tw-prose-code: var(--color-ink-100);
+  --tw-prose-pre-code: var(--color-ink-200);
+  --tw-prose-pre-bg: var(--color-ink-900);
+  --tw-prose-th-borders: var(--color-ink-700);
+  --tw-prose-td-borders: var(--color-ink-800);
+}
+
+/* ── Home page engraving (components/HomeBackdrop.tsx) ─────────────────────────────── */
+:root {
+  --atlas-glow: color-mix(in srgb, var(--color-accent-500) 13%, transparent);
+}
+:root[data-theme="light"] {
+  /* on paper, a soft light rather than a coloured haze */
+  --atlas-glow: color-mix(in srgb, #fffaf0 75%, transparent);
+}
+.atlas-glow {
+  background: radial-gradient(closest-side, var(--atlas-glow), transparent);
+}
+
+/* as large as fits: the viewport width, 44rem, or the height inside the frame */
+.atlas-globe-size {
+  --globe: min(92vw, 44rem, calc(100svh - 6rem));
+  width: var(--globe);
+  height: var(--globe);
+}
+
+/* map-ruler ticks along the frame: minor every 24px, major every 120px */
+.atlas-ruler-x {
+  background: repeating-linear-gradient(to right, currentColor 0 1px, transparent 1px 24px);
+}
+.atlas-ruler-x-major {
+  background: repeating-linear-gradient(to right, currentColor 0 1px, transparent 1px 120px);
+}
+.atlas-ruler-y {
+  background: repeating-linear-gradient(to bottom, currentColor 0 1px, transparent 1px 24px);
+}
+
+@keyframes atlas-rise {
+  from { opacity: 0; transform: translateY(14px); }
+  to { opacity: 1; transform: none; }
+}
+@keyframes atlas-fade {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+/* scaleX 1 -> -1 -> 1 with ease-in-out is close to cos(t): a meridian seen turning */
+@keyframes atlas-spin {
+  0%, 100% { transform: scaleX(1); }
+  50% { transform: scaleX(-1); }
+}
+@keyframes atlas-draw {
+  from { stroke-dashoffset: 1; }
+  to { stroke-dashoffset: 0; }
+}
+@keyframes atlas-pulse {
+  0%, 100% { opacity: 0.15; transform: scale(0.8); }
+  50% { opacity: 0.8; transform: scale(1.35); }
+}
+
+.atlas-rise { animation: atlas-rise 900ms cubic-bezier(0.2, 0.7, 0.2, 1) both; }
+.atlas-fade-slow { animation: atlas-fade 1600ms ease-out both; }
+.atlas-meridian {
+  transform-box: fill-box;
+  transform-origin: center;
+  animation: atlas-spin 36s ease-in-out infinite;
+}
+.atlas-draw {
+  stroke-dasharray: 1;
+  animation: atlas-draw 2400ms cubic-bezier(0.4, 0, 0.2, 1) both;
+}
+.atlas-pulse {
+  transform-box: fill-box;
+  transform-origin: center;
+  animation: atlas-pulse 4s ease-in-out infinite;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  /* a still engraving: each meridian frozen at its own angle instead of all at full width */
+  .atlas-meridian {
+    animation: none !important;
+    transform: scaleX(var(--sx));
+  }
+  /* off, not merely 0ms: a 0ms animation still waits out its delay with the start frame */
+  .atlas-draw,
+  .atlas-rise,
+  .atlas-fade-slow {
+    animation: none !important;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    transition-duration: 0ms !important;
+    animation-duration: 0ms !important;
+  }
+}

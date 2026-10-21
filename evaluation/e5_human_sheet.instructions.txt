@@ -1,0 +1,10 @@
+How to label (one label per row, in the `your_label` column):
+SUPPORTS    - B gives evidence that A's claim is true, in a comparable setting.
+CONTRADICTS - B asserts something that cannot be true if A is true, in a comparable setting.
+EXTENDS     - B builds on A's own result or method (new setting, method or scale).
+REPLICATES  - B directly reproduces A's setup.
+DIFF_SCOPE  - related question, but different systems, populations, datasets, metrics or conditions,
+              so neither is evidence for or against the other (incl. conflicts explained by scope).
+UNRELATED   - different questions.
+Two papers that each describe their OWN device are about different things: usually DIFF_SCOPE
+(same question) or UNRELATED - not SUPPORTS/EXTENDS/CONTRADICTS just because the parts overlap.
